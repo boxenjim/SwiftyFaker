@@ -14,7 +14,6 @@
 		9B454B461BACC3E300C5D2CE /* SwiftyFaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B454B441BACC3E300C5D2CE /* SwiftyFaker.h */; settings = {ASSET_TAGS = (); }; };
 		9B454B7D1BACC92A00C5D2CE /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B454B661BACC92A00C5D2CE /* Address.swift */; settings = {ASSET_TAGS = (); }; };
 		9B454B7E1BACC92A00C5D2CE /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B454B671BACC92A00C5D2CE /* App.swift */; settings = {ASSET_TAGS = (); }; };
-		9B454B7F1BACC92A00C5D2CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B454B681BACC92A00C5D2CE /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 		9B454B801BACC92A00C5D2CE /* Bitcoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B454B691BACC92A00C5D2CE /* Bitcoin.swift */; settings = {ASSET_TAGS = (); }; };
 		9B454B811BACC92A00C5D2CE /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B454B6A1BACC92A00C5D2CE /* Book.swift */; settings = {ASSET_TAGS = (); }; };
 		9B454B821BACC92A00C5D2CE /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B454B6B1BACC92A00C5D2CE /* Business.swift */; settings = {ASSET_TAGS = (); }; };
@@ -23,7 +22,6 @@
 		9B454B851BACC92A00C5D2CE /* Commerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B454B6E1BACC92A00C5D2CE /* Commerce.swift */; settings = {ASSET_TAGS = (); }; };
 		9B454B861BACC92A00C5D2CE /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B454B6F1BACC92A00C5D2CE /* Company.swift */; settings = {ASSET_TAGS = (); }; };
 		9B454B871BACC92A00C5D2CE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B454B701BACC92A00C5D2CE /* Date.swift */; settings = {ASSET_TAGS = (); }; };
-		9B454B881BACC92A00C5D2CE /* Faker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B454B711BACC92A00C5D2CE /* Faker.swift */; settings = {ASSET_TAGS = (); }; };
 		9B454B891BACC92A00C5D2CE /* Finance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B454B721BACC92A00C5D2CE /* Finance.swift */; settings = {ASSET_TAGS = (); }; };
 		9B454B8A1BACC92A00C5D2CE /* Hacker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B454B731BACC92A00C5D2CE /* Hacker.swift */; settings = {ASSET_TAGS = (); }; };
 		9B454B8B1BACC92A00C5D2CE /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B454B741BACC92A00C5D2CE /* Internet.swift */; settings = {ASSET_TAGS = (); }; };
@@ -37,6 +35,26 @@
 		9B454B931BACC92A00C5D2CE /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B454B7C1BACC92A00C5D2CE /* University.swift */; settings = {ASSET_TAGS = (); }; };
 		9B454B971BACC93500C5D2CE /* lorem.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454B951BACC93500C5D2CE /* lorem.json */; settings = {ASSET_TAGS = (); }; };
 		9B454B981BACC93500C5D2CE /* name.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454B961BACC93500C5D2CE /* name.json */; settings = {ASSET_TAGS = (); }; };
+		9B454B9A1BACDAD500C5D2CE /* Faker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B454B991BACDAD500C5D2CE /* Faker.swift */; settings = {ASSET_TAGS = (); }; };
+		9B454B9C1BACDBAE00C5D2CE /* address.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454B9B1BACDBAE00C5D2CE /* address.json */; settings = {ASSET_TAGS = (); }; };
+		9B454BAF1BACDCCD00C5D2CE /* app.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454B9D1BACDCCD00C5D2CE /* app.json */; settings = {ASSET_TAGS = (); }; };
+		9B454BB01BACDCCD00C5D2CE /* bitcoin.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454B9E1BACDCCD00C5D2CE /* bitcoin.json */; settings = {ASSET_TAGS = (); }; };
+		9B454BB11BACDCCD00C5D2CE /* book.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454B9F1BACDCCD00C5D2CE /* book.json */; settings = {ASSET_TAGS = (); }; };
+		9B454BB21BACDCCD00C5D2CE /* business.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454BA01BACDCCD00C5D2CE /* business.json */; settings = {ASSET_TAGS = (); }; };
+		9B454BB31BACDCCD00C5D2CE /* code.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454BA11BACDCCD00C5D2CE /* code.json */; settings = {ASSET_TAGS = (); }; };
+		9B454BB41BACDCCD00C5D2CE /* color.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454BA21BACDCCD00C5D2CE /* color.json */; settings = {ASSET_TAGS = (); }; };
+		9B454BB51BACDCCD00C5D2CE /* commerce.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454BA31BACDCCD00C5D2CE /* commerce.json */; settings = {ASSET_TAGS = (); }; };
+		9B454BB61BACDCCD00C5D2CE /* company.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454BA41BACDCCD00C5D2CE /* company.json */; settings = {ASSET_TAGS = (); }; };
+		9B454BB71BACDCCD00C5D2CE /* date.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454BA51BACDCCD00C5D2CE /* date.json */; settings = {ASSET_TAGS = (); }; };
+		9B454BB81BACDCCD00C5D2CE /* finance.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454BA61BACDCCD00C5D2CE /* finance.json */; settings = {ASSET_TAGS = (); }; };
+		9B454BB91BACDCCD00C5D2CE /* hacker.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454BA71BACDCCD00C5D2CE /* hacker.json */; settings = {ASSET_TAGS = (); }; };
+		9B454BBA1BACDCCD00C5D2CE /* internet.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454BA81BACDCCD00C5D2CE /* internet.json */; settings = {ASSET_TAGS = (); }; };
+		9B454BBB1BACDCCD00C5D2CE /* number.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454BA91BACDCCD00C5D2CE /* number.json */; settings = {ASSET_TAGS = (); }; };
+		9B454BBC1BACDCCD00C5D2CE /* phone_number.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454BAA1BACDCCD00C5D2CE /* phone_number.json */; settings = {ASSET_TAGS = (); }; };
+		9B454BBD1BACDCCD00C5D2CE /* slack_emoji.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454BAB1BACDCCD00C5D2CE /* slack_emoji.json */; settings = {ASSET_TAGS = (); }; };
+		9B454BBE1BACDCCD00C5D2CE /* team.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454BAC1BACDCCD00C5D2CE /* team.json */; settings = {ASSET_TAGS = (); }; };
+		9B454BBF1BACDCCD00C5D2CE /* time.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454BAD1BACDCCD00C5D2CE /* time.json */; settings = {ASSET_TAGS = (); }; };
+		9B454BC01BACDCCD00C5D2CE /* university.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454BAE1BACDCCD00C5D2CE /* university.json */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +76,6 @@
 		9B454B441BACC3E300C5D2CE /* SwiftyFaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwiftyFaker.h; path = Source/SwiftyFaker.h; sourceTree = SOURCE_ROOT; };
 		9B454B661BACC92A00C5D2CE /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		9B454B671BACC92A00C5D2CE /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		9B454B681BACC92A00C5D2CE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B454B691BACC92A00C5D2CE /* Bitcoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bitcoin.swift; sourceTree = "<group>"; };
 		9B454B6A1BACC92A00C5D2CE /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		9B454B6B1BACC92A00C5D2CE /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
@@ -67,7 +84,6 @@
 		9B454B6E1BACC92A00C5D2CE /* Commerce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commerce.swift; sourceTree = "<group>"; };
 		9B454B6F1BACC92A00C5D2CE /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		9B454B701BACC92A00C5D2CE /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
-		9B454B711BACC92A00C5D2CE /* Faker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Faker.swift; sourceTree = "<group>"; };
 		9B454B721BACC92A00C5D2CE /* Finance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Finance.swift; sourceTree = "<group>"; };
 		9B454B731BACC92A00C5D2CE /* Hacker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hacker.swift; sourceTree = "<group>"; };
 		9B454B741BACC92A00C5D2CE /* Internet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
@@ -81,6 +97,26 @@
 		9B454B7C1BACC92A00C5D2CE /* University.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
 		9B454B951BACC93500C5D2CE /* lorem.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lorem.json; sourceTree = "<group>"; };
 		9B454B961BACC93500C5D2CE /* name.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = name.json; sourceTree = "<group>"; };
+		9B454B991BACDAD500C5D2CE /* Faker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Faker.swift; path = Source/Faker.swift; sourceTree = SOURCE_ROOT; };
+		9B454B9B1BACDBAE00C5D2CE /* address.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = address.json; sourceTree = "<group>"; };
+		9B454B9D1BACDCCD00C5D2CE /* app.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = app.json; sourceTree = "<group>"; };
+		9B454B9E1BACDCCD00C5D2CE /* bitcoin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bitcoin.json; sourceTree = "<group>"; };
+		9B454B9F1BACDCCD00C5D2CE /* book.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = book.json; sourceTree = "<group>"; };
+		9B454BA01BACDCCD00C5D2CE /* business.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = business.json; sourceTree = "<group>"; };
+		9B454BA11BACDCCD00C5D2CE /* code.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = code.json; sourceTree = "<group>"; };
+		9B454BA21BACDCCD00C5D2CE /* color.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = color.json; sourceTree = "<group>"; };
+		9B454BA31BACDCCD00C5D2CE /* commerce.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = commerce.json; sourceTree = "<group>"; };
+		9B454BA41BACDCCD00C5D2CE /* company.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = company.json; sourceTree = "<group>"; };
+		9B454BA51BACDCCD00C5D2CE /* date.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = date.json; sourceTree = "<group>"; };
+		9B454BA61BACDCCD00C5D2CE /* finance.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = finance.json; sourceTree = "<group>"; };
+		9B454BA71BACDCCD00C5D2CE /* hacker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hacker.json; sourceTree = "<group>"; };
+		9B454BA81BACDCCD00C5D2CE /* internet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = internet.json; sourceTree = "<group>"; };
+		9B454BA91BACDCCD00C5D2CE /* number.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = number.json; sourceTree = "<group>"; };
+		9B454BAA1BACDCCD00C5D2CE /* phone_number.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = phone_number.json; sourceTree = "<group>"; };
+		9B454BAB1BACDCCD00C5D2CE /* slack_emoji.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = slack_emoji.json; sourceTree = "<group>"; };
+		9B454BAC1BACDCCD00C5D2CE /* team.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = team.json; sourceTree = "<group>"; };
+		9B454BAD1BACDCCD00C5D2CE /* time.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = time.json; sourceTree = "<group>"; };
+		9B454BAE1BACDCCD00C5D2CE /* university.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = university.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,10 +159,11 @@
 		9B454B261BACC29800C5D2CE /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				9B454B941BACC93500C5D2CE /* json */,
-				9B454B651BACC92A00C5D2CE /* faker */,
-				9B454B431BACC3E300C5D2CE /* Info.plist */,
+				9B454B991BACDAD500C5D2CE /* Faker.swift */,
 				9B454B441BACC3E300C5D2CE /* SwiftyFaker.h */,
+				9B454B431BACC3E300C5D2CE /* Info.plist */,
+				9B454B651BACC92A00C5D2CE /* faker */,
+				9B454B941BACC93500C5D2CE /* json */,
 			);
 			name = Source;
 			path = SwiftyFaker;
@@ -147,7 +184,6 @@
 			children = (
 				9B454B661BACC92A00C5D2CE /* Address.swift */,
 				9B454B671BACC92A00C5D2CE /* App.swift */,
-				9B454B681BACC92A00C5D2CE /* AppDelegate.swift */,
 				9B454B691BACC92A00C5D2CE /* Bitcoin.swift */,
 				9B454B6A1BACC92A00C5D2CE /* Book.swift */,
 				9B454B6B1BACC92A00C5D2CE /* Business.swift */,
@@ -156,7 +192,6 @@
 				9B454B6E1BACC92A00C5D2CE /* Commerce.swift */,
 				9B454B6F1BACC92A00C5D2CE /* Company.swift */,
 				9B454B701BACC92A00C5D2CE /* Date.swift */,
-				9B454B711BACC92A00C5D2CE /* Faker.swift */,
 				9B454B721BACC92A00C5D2CE /* Finance.swift */,
 				9B454B731BACC92A00C5D2CE /* Hacker.swift */,
 				9B454B741BACC92A00C5D2CE /* Internet.swift */,
@@ -176,8 +211,27 @@
 		9B454B941BACC93500C5D2CE /* json */ = {
 			isa = PBXGroup;
 			children = (
+				9B454B9D1BACDCCD00C5D2CE /* app.json */,
+				9B454B9E1BACDCCD00C5D2CE /* bitcoin.json */,
+				9B454B9F1BACDCCD00C5D2CE /* book.json */,
+				9B454BA01BACDCCD00C5D2CE /* business.json */,
+				9B454BA11BACDCCD00C5D2CE /* code.json */,
+				9B454BA21BACDCCD00C5D2CE /* color.json */,
+				9B454BA31BACDCCD00C5D2CE /* commerce.json */,
+				9B454BA41BACDCCD00C5D2CE /* company.json */,
+				9B454BA51BACDCCD00C5D2CE /* date.json */,
+				9B454BA61BACDCCD00C5D2CE /* finance.json */,
+				9B454BA71BACDCCD00C5D2CE /* hacker.json */,
+				9B454BA81BACDCCD00C5D2CE /* internet.json */,
+				9B454BA91BACDCCD00C5D2CE /* number.json */,
+				9B454BAA1BACDCCD00C5D2CE /* phone_number.json */,
+				9B454BAB1BACDCCD00C5D2CE /* slack_emoji.json */,
+				9B454BAC1BACDCCD00C5D2CE /* team.json */,
+				9B454BAD1BACDCCD00C5D2CE /* time.json */,
+				9B454BAE1BACDCCD00C5D2CE /* university.json */,
 				9B454B951BACC93500C5D2CE /* lorem.json */,
 				9B454B961BACC93500C5D2CE /* name.json */,
+				9B454B9B1BACDBAE00C5D2CE /* address.json */,
 			);
 			name = json;
 			path = Source/json;
@@ -274,10 +328,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B454BB51BACDCCD00C5D2CE /* commerce.json in Resources */,
+				9B454BB91BACDCCD00C5D2CE /* hacker.json in Resources */,
+				9B454BBF1BACDCCD00C5D2CE /* time.json in Resources */,
 				9B454B451BACC3E300C5D2CE /* Info.plist in Resources */,
+				9B454BC01BACDCCD00C5D2CE /* university.json in Resources */,
+				9B454B9C1BACDBAE00C5D2CE /* address.json in Resources */,
+				9B454BB61BACDCCD00C5D2CE /* company.json in Resources */,
+				9B454BB01BACDCCD00C5D2CE /* bitcoin.json in Resources */,
+				9B454BB71BACDCCD00C5D2CE /* date.json in Resources */,
+				9B454BBC1BACDCCD00C5D2CE /* phone_number.json in Resources */,
 				9B454B971BACC93500C5D2CE /* lorem.json in Resources */,
+				9B454BBA1BACDCCD00C5D2CE /* internet.json in Resources */,
+				9B454BB11BACDCCD00C5D2CE /* book.json in Resources */,
 				9B454B981BACC93500C5D2CE /* name.json in Resources */,
+				9B454BB31BACDCCD00C5D2CE /* code.json in Resources */,
+				9B454BB81BACDCCD00C5D2CE /* finance.json in Resources */,
 				9B454B411BACC3D100C5D2CE /* Info.plist in Resources */,
+				9B454BBB1BACDCCD00C5D2CE /* number.json in Resources */,
+				9B454BAF1BACDCCD00C5D2CE /* app.json in Resources */,
+				9B454BBD1BACDCCD00C5D2CE /* slack_emoji.json in Resources */,
+				9B454BB21BACDCCD00C5D2CE /* business.json in Resources */,
+				9B454BB41BACDCCD00C5D2CE /* color.json in Resources */,
+				9B454BBE1BACDCCD00C5D2CE /* team.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,8 +368,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B454B9A1BACDAD500C5D2CE /* Faker.swift in Sources */,
 				9B454B831BACC92A00C5D2CE /* Code.swift in Sources */,
-				9B454B7F1BACC92A00C5D2CE /* AppDelegate.swift in Sources */,
 				9B454B8B1BACC92A00C5D2CE /* Internet.swift in Sources */,
 				9B454B8F1BACC92A00C5D2CE /* PhoneNumber.swift in Sources */,
 				9B454B851BACC92A00C5D2CE /* Commerce.swift in Sources */,
@@ -307,7 +380,6 @@
 				9B454B911BACC92A00C5D2CE /* Team.swift in Sources */,
 				9B454B801BACC92A00C5D2CE /* Bitcoin.swift in Sources */,
 				9B454B811BACC92A00C5D2CE /* Book.swift in Sources */,
-				9B454B881BACC92A00C5D2CE /* Faker.swift in Sources */,
 				9B454B8A1BACC92A00C5D2CE /* Hacker.swift in Sources */,
 				9B454B8C1BACC92A00C5D2CE /* Lorem.swift in Sources */,
 				9B454B8E1BACC92A00C5D2CE /* Number.swift in Sources */,
@@ -437,7 +509,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SwiftyFaker/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = boxenjim.SwiftyFaker;
@@ -455,7 +527,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SwiftyFaker/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = boxenjim.SwiftyFaker;
