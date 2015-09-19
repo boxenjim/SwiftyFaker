@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import SwiftyFaker
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        print(Faker.Name.name())
+        print(Faker.Name.firstName())
+        print(Faker.Name.lastName())
+        print(Faker.Name.prefix())
+        print(Faker.Name.suffix())
+        print(Faker.Name.title())
     }
 
     override func didReceiveMemoryWarning() {

@@ -53,6 +53,7 @@
 		9B454C441BACDFC300C5D2CE /* team.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454C191BACDFC300C5D2CE /* team.json */; settings = {ASSET_TAGS = (); }; };
 		9B454C451BACDFC300C5D2CE /* time.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454C1A1BACDFC300C5D2CE /* time.json */; settings = {ASSET_TAGS = (); }; };
 		9B454C461BACDFC300C5D2CE /* university.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454C1B1BACDFC300C5D2CE /* university.json */; settings = {ASSET_TAGS = (); }; };
+		9B454D6A1BAD110300C5D2CE /* NameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B454D691BAD110300C5D2CE /* NameTests.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		9B454C191BACDFC300C5D2CE /* team.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = team.json; sourceTree = "<group>"; };
 		9B454C1A1BACDFC300C5D2CE /* time.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = time.json; sourceTree = "<group>"; };
 		9B454C1B1BACDFC300C5D2CE /* university.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = university.json; sourceTree = "<group>"; };
+		9B454D691BAD110300C5D2CE /* NameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,8 @@
 		9B454BE31BACDF6300C5D2CE /* SwiftyFakerTests */ = {
 			isa = PBXGroup;
 			children = (
+				9B454D671BAD10D600C5D2CE /* Name */,
+				9B454D681BAD10DE00C5D2CE /* Lorem */,
 				9B454BE41BACDF6300C5D2CE /* SwiftyFakerTests.swift */,
 				9B454BE61BACDF6300C5D2CE /* Info.plist */,
 			);
@@ -229,6 +233,21 @@
 				9B454C1B1BACDFC300C5D2CE /* university.json */,
 			);
 			path = json;
+			sourceTree = "<group>";
+		};
+		9B454D671BAD10D600C5D2CE /* Name */ = {
+			isa = PBXGroup;
+			children = (
+				9B454D691BAD110300C5D2CE /* NameTests.swift */,
+			);
+			name = Name;
+			sourceTree = "<group>";
+		};
+		9B454D681BAD10DE00C5D2CE /* Lorem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Lorem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +312,7 @@
 				TargetAttributes = {
 					9B454BD41BACDF6300C5D2CE = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = Y3M2N58M87;
 					};
 					9B454BDE1BACDF6300C5D2CE = {
 						CreatedOnToolsVersion = 7.0;
@@ -389,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B454D6A1BAD110300C5D2CE /* NameTests.swift in Sources */,
 				9B454BE51BACDF6300C5D2CE /* SwiftyFakerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +518,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -515,6 +537,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

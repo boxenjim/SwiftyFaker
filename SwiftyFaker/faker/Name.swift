@@ -9,9 +9,9 @@
 import Foundation
 
 extension Faker {
-    class Name: Faker {
-        private var fnames: [String]?
-        private var lnames: [String]?
+    public class Name: Faker {
+        private var first_names: [String]?
+        private var last_names: [String]?
         private var prefixes: [String]?
         private var suffixes: [String]?
         private var titles: [String : AnyObject]?
@@ -31,11 +31,11 @@ extension Faker {
         private static let sharedName = Name(dictionary: Faker.nameJSON())
         
         // MARK: NSKeyValueCoding
-        override func setValue(value: AnyObject?, forKey key: String) {
+        public override func setValue(value: AnyObject?, forKey key: String) {
             if key == "first_name" {
-                fnames = value as? [String]
+                first_names = value as? [String]
             } else if key == "last_name" {
-                lnames = value as? [String]
+                last_names = value as? [String]
             } else if key == "prefix" {
                 prefixes = value as? [String]
             } else if key == "suffix" {
@@ -48,30 +48,30 @@ extension Faker {
         }
         
         // MARK: Name methods
-        static func name() -> String {
+        public static func name() -> String {
             return firstName() + " " + lastName()
         }
         
-        static func firstName() -> String {
-            guard let fnames = sharedName.fnames else { return "" }
+        public static func firstName() -> String {
+            guard let fnames = sharedName.first_names else { return "" }
             guard let fname = randObj(fnames) as? String else { return "" }
             return fname
         }
         
-        static func lastName() -> String {
-            guard let lnames = sharedName.lnames else { return "" }
+        public static func lastName() -> String {
+            guard let lnames = sharedName.last_names else { return "" }
             guard let lname = randObj(lnames) as? String else { return "" }
             return lname
         }
         
-        static func prefix() -> String {
+        public static func prefix() -> String {
             guard let prefixes = sharedName.prefixes else { return "" }
             guard let prfx = randObj(prefixes) as? String else { return "" }
             return prfx
         }
         
-        static func suffix() -> String {
-            guard let suffixes = sharedName.fnames else { return "" }
+        public static func suffix() -> String {
+            guard let suffixes = sharedName.suffixes else { return "" }
             guard let sffx = randObj(suffixes) as? String else { return "" }
             return sffx
         }
@@ -80,7 +80,7 @@ extension Faker {
             Generate a buzzword-laden job title, 
             Wordlist from http://www.bullshitjob.com/title/
         */
-        static func title() -> String {
+        public static func title() -> String {
             guard let descriptors = sharedName.descriptors else { return "" }
             guard let levels = sharedName.levels else { return "" }
             guard let jobs = sharedName.jobs else { return "" }

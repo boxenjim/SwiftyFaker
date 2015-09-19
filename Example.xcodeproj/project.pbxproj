@@ -12,7 +12,47 @@
 		9B454B591BACC64200C5D2CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B454B571BACC64200C5D2CE /* Main.storyboard */; };
 		9B454B5B1BACC64200C5D2CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B454B5A1BACC64200C5D2CE /* Assets.xcassets */; };
 		9B454B5E1BACC64200C5D2CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B454B5C1BACC64200C5D2CE /* LaunchScreen.storyboard */; };
+		9B454D8A1BAD19E300C5D2CE /* SwiftyFaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B454D711BAD171A00C5D2CE /* SwiftyFaker.framework */; };
+		9B454D8B1BAD19EE00C5D2CE /* SwiftyFaker.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 9B454D711BAD171A00C5D2CE /* SwiftyFaker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9B454D701BAD171A00C5D2CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B454D6B1BAD171A00C5D2CE /* SwiftyFaker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9B454BD51BACDF6300C5D2CE;
+			remoteInfo = SwiftyFaker;
+		};
+		9B454D721BAD171A00C5D2CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B454D6B1BAD171A00C5D2CE /* SwiftyFaker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9B454BDF1BACDF6300C5D2CE;
+			remoteInfo = SwiftyFakerTests;
+		};
+		9B454D8C1BAD1A2500C5D2CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B454D6B1BAD171A00C5D2CE /* SwiftyFaker.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B454BD41BACDF6300C5D2CE;
+			remoteInfo = SwiftyFaker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9B454D891BAD19C000C5D2CE /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9B454D8B1BAD19EE00C5D2CE /* SwiftyFaker.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9B454B501BACC64200C5D2CE /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +62,7 @@
 		9B454B5A1BACC64200C5D2CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B454B5D1BACC64200C5D2CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B454B5F1BACC64200C5D2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B454D6B1BAD171A00C5D2CE /* SwiftyFaker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwiftyFaker.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B454D8A1BAD19E300C5D2CE /* SwiftyFaker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +82,7 @@
 			children = (
 				9B454B521BACC64200C5D2CE /* Example */,
 				9B454B511BACC64200C5D2CE /* Products */,
+				9B454D6B1BAD171A00C5D2CE /* SwiftyFaker.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +107,15 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
+		9B454D6C1BAD171A00C5D2CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B454D711BAD171A00C5D2CE /* SwiftyFaker.framework */,
+				9B454D731BAD171A00C5D2CE /* SwiftyFakerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,10 +126,12 @@
 				9B454B4C1BACC64200C5D2CE /* Sources */,
 				9B454B4D1BACC64200C5D2CE /* Frameworks */,
 				9B454B4E1BACC64200C5D2CE /* Resources */,
+				9B454D891BAD19C000C5D2CE /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9B454D8D1BAD1A2500C5D2CE /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -109,12 +163,35 @@
 			mainGroup = 9B454B471BACC64200C5D2CE;
 			productRefGroup = 9B454B511BACC64200C5D2CE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9B454D6C1BAD171A00C5D2CE /* Products */;
+					ProjectRef = 9B454D6B1BAD171A00C5D2CE /* SwiftyFaker.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				9B454B4F1BACC64200C5D2CE /* Example */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9B454D711BAD171A00C5D2CE /* SwiftyFaker.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyFaker.framework;
+			remoteRef = 9B454D701BAD171A00C5D2CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9B454D731BAD171A00C5D2CE /* SwiftyFakerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftyFakerTests.xctest;
+			remoteRef = 9B454D721BAD171A00C5D2CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9B454B4E1BACC64200C5D2CE /* Resources */ = {
@@ -140,6 +217,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9B454D8D1BAD1A2500C5D2CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyFaker;
+			targetProxy = 9B454D8C1BAD1A2500C5D2CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9B454B571BACC64200C5D2CE /* Main.storyboard */ = {
@@ -283,6 +368,7 @@
 				9B454B641BACC64200C5D2CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

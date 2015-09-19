@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Faker: NSObject {
+public class Faker: NSObject {
     internal init(dictionary: [String : AnyObject]) {
         super.init()
         self.setValuesForKeysWithDictionary(dictionary)
@@ -19,11 +19,16 @@ class Faker: NSObject {
     }
     
     // MARK: NSKeyValueCoding
-    internal override func setValue(value: AnyObject?, forUndefinedKey key: String) {
+    public override func setValue(value: AnyObject?, forUndefinedKey key: String) {
         print("KEY: \(key) VALUE: \(value)")
     }
     
     // MARK: helpers
+    internal static func loremJSON() -> [String : AnyObject] {
+        guard let name = readjson("lorem") as? [String : AnyObject] else { return [String : AnyObject]() }
+        return name
+    }
+    
     internal static func nameJSON() -> [String : AnyObject] {
         guard let name = readjson("name") as? [String : AnyObject] else { return [String : AnyObject]() }
         return name
@@ -41,7 +46,7 @@ class Faker: NSObject {
     
     internal static func readjson(fileName: String) -> AnyObject? {
         do {
-            if let path = NSBundle.mainBundle().pathForResource(fileName, ofType: "json") {
+            if let path = NSBundle(forClass: self).pathForResource(fileName, ofType: "json") {
                 let jsonData = try NSData(contentsOfFile: path, options: NSDataReadingOptions.DataReadingMappedIfSafe)
                 let jsonResult = try NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions())
                 return jsonResult
