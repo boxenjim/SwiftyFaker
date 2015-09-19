@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+extension Faker {
+    public class Bitcoin: Faker {
+        
+    }
+}
