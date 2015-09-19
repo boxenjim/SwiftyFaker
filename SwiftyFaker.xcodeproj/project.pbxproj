@@ -157,8 +157,8 @@
 		9B454BD71BACDF6300C5D2CE /* SwiftyFaker */ = {
 			isa = PBXGroup;
 			children = (
-				9B454BEF1BACDFC300C5D2CE /* faker */,
 				9B454C051BACDFC300C5D2CE /* Faker.swift */,
+				9B454BEF1BACDFC300C5D2CE /* faker */,
 				9B454C061BACDFC300C5D2CE /* json */,
 				9B454BD81BACDF6300C5D2CE /* SwiftyFaker.h */,
 				9B454BDA1BACDF6300C5D2CE /* Info.plist */,
@@ -567,6 +567,7 @@
 				9B454BEB1BACDF6300C5D2CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B454BEC1BACDF6300C5D2CE /* Build configuration list for PBXNativeTarget "SwiftyFakerTests" */ = {
 			isa = XCConfigurationList;
@@ -575,6 +576,7 @@
 				9B454BEE1BACDF6300C5D2CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
