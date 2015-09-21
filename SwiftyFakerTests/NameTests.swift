@@ -23,31 +23,31 @@ class NameTests: XCTestCase {
     
     func testName() {
         let name = Faker.Name.name()
-        XCTAssertFalse(name.isEmpty, "\(name)")
+        XCTAssertFalse(name.isEmpty, "name shouldn't be empty")
     }
     
     func testFirstName() {
         let firstName = Faker.Name.name()
-        XCTAssertFalse(firstName.isEmpty, "\(firstName)")
+        XCTAssertFalse(firstName.isEmpty, "firstName shouldn't be empty")
     }
     
     func testLastName() {
         let lastName = Faker.Name.name()
-        XCTAssertFalse(lastName.isEmpty, "\(lastName)")
+        XCTAssertFalse(lastName.isEmpty, "lastName shouldn't be empty")
     }
     
     func testPrefix() {
         let prefix = Faker.Name.prefix()
-        XCTAssertFalse(prefix.isEmpty, "\(prefix)")
+        XCTAssertFalse(prefix.isEmpty, "prefix shouldn't be empty")
     }
     
     func testSuffix() {
         let suffix = Faker.Name.suffix()
-        XCTAssertFalse(suffix.isEmpty, "\(suffix)")
+        XCTAssertFalse(suffix.isEmpty, "suffix shouldn't be empty")
     }
     
     func testTitle() {
         let title = Faker.Name.title()
-        XCTAssertFalse(title.isEmpty, "\(title)")
+        XCTAssertFalse(title.isEmpty, "title shouldn't be empty")
     }
 }

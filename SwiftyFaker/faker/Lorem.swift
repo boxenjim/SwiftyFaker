@@ -17,8 +17,10 @@ extension Faker {
         
         // MARK: NSKeyValueCoding
         override func setValue(value: AnyObject?, forKey key: String) {
-            if key == "words" {
+            if key == "word" {
                 wrds = value as? [String]
+            } else if key == "supplemental" {
+                supplementals = value as? [String]
             } else {
                 super.setValue(value, forKey: key)
             }
@@ -27,7 +29,7 @@ extension Faker {
         
         static func word() -> String {
             let wrds = words(1) as [String]
-            let word = wrds.first!
+            let word = wrds.last!
             return word
         }
         
@@ -37,7 +39,7 @@ extension Faker {
             
             var array = [String]()
             
-            for _ in 0...count {
+            for _ in 0..<count {
                 let randWord = supplemental ? randObj(supplementals) : randObj(wordsArray)
                 array.append(randWord as! String)
             }
