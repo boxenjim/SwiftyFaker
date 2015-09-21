@@ -40,8 +40,8 @@ extension Faker {
             var array = [String]()
             
             for _ in 0..<count {
-                let randWord = supplemental ? randObj(supplementals) : randObj(wordsArray)
-                array.append(randWord as! String)
+                let randWord = supplemental ? supplementals.random() : wordsArray.random()
+                array.append(randWord)
             }
             
             return array

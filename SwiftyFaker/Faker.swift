@@ -8,6 +8,29 @@
 
 import UIKit
 
+extension Int {
+    static func random(range: Range<Int> ) -> Int {
+        var offset = 0
+        
+        if range.startIndex < 0 {
+            offset = abs(range.startIndex)
+        }
+        
+        let min = UInt32(range.startIndex + offset)
+        let max = UInt32(range.endIndex   + offset)
+        
+        return Int(min + arc4random_uniform(max - min)) - offset
+    }
+}
+
+extension Array {
+    func random() -> Element {
+        let randInt = Int.random(0...self.count)
+        let obj = self[randInt]
+        return obj
+    }
+}
+
 public class Faker: NSObject {
     internal init(dictionary: [String : AnyObject]) {
         super.init()
@@ -32,16 +55,6 @@ public class Faker: NSObject {
     internal static func nameJSON() -> [String : AnyObject] {
         guard let name = readjson("name") as? [String : AnyObject] else { return [String : AnyObject]() }
         return name
-    }
-    
-    internal static func randObj(array: [AnyObject]) -> AnyObject {
-        let randInt1 = randomInt(NSMakeRange(0, array.count))
-        let obj = array[Int(randInt1)]
-        return obj
-    }
-    
-    internal static func randomInt(range: NSRange) -> Int {
-        return Int(arc4random_uniform(UInt32(range.length)) + UInt32(range.location))
     }
     
     internal static func readjson(fileName: String) -> AnyObject? {

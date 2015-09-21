@@ -21,12 +21,19 @@ class FakerTests: XCTestCase {
         super.tearDown()
     }
     
-    func testRandInt() {
-        let lowInt = Faker.randomInt(NSMakeRange(0, 100))
-        let highInt = Faker.randomInt(NSMakeRange(101, 1000))
+    func testIntRandom() {
+        let lowInt = Int.random(0...100)
+        let highInt = Int.random(101...1000)
         
-        let randInt = Faker.randomInt(NSMakeRange(lowInt, highInt))
+        let randInt = Int.random(lowInt...highInt)
         
-        XCTAssertTrue(randInt >= lowInt && randInt <= highInt, "should be between \(lowInt) and \(highInt)")
+        XCTAssertTrue(randInt >= lowInt && randInt <= highInt, "\(randInt) should be between \(lowInt) and \(highInt)")
+    }
+    
+    func testArrayRandom() {
+        let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+        let randomObj = array.random()
+        
+        XCTAssertTrue(array.contains(randomObj), "\(randomObj) should be in array")
     }
 }

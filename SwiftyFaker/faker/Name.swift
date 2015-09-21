@@ -54,25 +54,25 @@ extension Faker {
         
         public static func firstName() -> String {
             guard let fnames = sharedName.first_names else { return "" }
-            guard let fname = randObj(fnames) as? String else { return "" }
+            let fname = fnames.random()
             return fname
         }
         
         public static func lastName() -> String {
             guard let lnames = sharedName.last_names else { return "" }
-            guard let lname = randObj(lnames) as? String else { return "" }
+            let lname = lnames.random()
             return lname
         }
         
         public static func prefix() -> String {
             guard let prefixes = sharedName.prefixes else { return "" }
-            guard let prfx = randObj(prefixes) as? String else { return "" }
+            let prfx = prefixes.random()
             return prfx
         }
         
         public static func suffix() -> String {
             guard let suffixes = sharedName.suffixes else { return "" }
-            guard let sffx = randObj(suffixes) as? String else { return "" }
+            let sffx = suffixes.random()
             return sffx
         }
         
@@ -85,9 +85,9 @@ extension Faker {
             guard let levels = sharedName.levels else { return "" }
             guard let jobs = sharedName.jobs else { return "" }
             
-            guard let descriptor = randObj(descriptors) as? String else { return "" }
-            guard let level = randObj(levels) as? String else { return "" }
-            guard let job = randObj(jobs) as? String else { return "" }
+            let descriptor = descriptors.random()
+            let level = levels.random()
+            let job = jobs.random()
             
             return descriptor + " " + level + " " + job
         }

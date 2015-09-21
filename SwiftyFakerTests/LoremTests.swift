@@ -32,7 +32,7 @@ class LoremTests: XCTestCase {
     }
     
     func testWordsWithCustomCount() {
-        let count = Faker.randomInt(NSMakeRange(1, 50))
+        let count = Int.random(1...50)
         let words = Faker.Lorem.words(count)
         XCTAssertEqual(words.count, count, "words count should match, expected \(count) but got \(words.count)")
     }
@@ -44,7 +44,7 @@ class LoremTests: XCTestCase {
     }
     
     func testSentenceWithCustomCount() {
-        let count = Faker.randomInt(NSMakeRange(1, 50))
+        let count = Int.random(1...50)
         let sentence = Faker.Lorem.sentence(count)
         let array = sentence.componentsSeparatedByString(" ")
         XCTAssertEqual(array.count, count, "sentence word count should match, expected \(count), but got \(array.count)")
