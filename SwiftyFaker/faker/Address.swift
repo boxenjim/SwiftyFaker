@@ -9,31 +9,101 @@
 import Foundation
 
 extension Faker {
-    class Address: Faker {
-        static func city() {
-            
+    public class Address: Faker {
+        private var city_prefixes: [String]?
+        private var city_suffixes: [String]?
+        private var countries: [String]?
+        private var country_codes: [String]?
+        private var building_numbers: [String]?
+        private var street_suffixes: [String]?
+        private var secondary_addresses: [String]?
+        private var postcodes: [String]?
+        private var postcodes_by_state: [String]?
+        private var states: [String]?
+        private var states_abbr: [String]?
+        private var time_zones: [String]?
+        
+        private static let sharedAddress = Address(dictionary: Faker.addressJSON())
+        
+        // MARK: NSKeyValueCoding
+        public override func setValue(value: AnyObject?, forKey key: String) {
+            if key == "city_prefix" {
+                city_prefixes = value as? [String]
+            } else if key == "city_suffix" {
+                city_suffixes = value as? [String]
+            } else if key == "country" {
+                countries = value as? [String]
+            } else if key == "country_code" {
+                country_codes = value as? [String]
+            } else if key == "building_number" {
+                building_numbers = value as? [String]
+            } else if key == "street_suffix" {
+                street_suffixes = value as? [String]
+            } else if key == "secondary_address" {
+                secondary_addresses = value as? [String]
+            } else if key == "postcode" {
+                postcodes = value as? [String]
+            } else if key == "postcode_by_state" {
+                postcodes_by_state = value as? [String]
+            } else if key == "state" {
+                states = value as? [String]
+            } else if key == "state_abbr" {
+                states_abbr = value as? [String]
+            } else if key == "time_zone" {
+                time_zones = value as? [String]
+            } else {
+                super.setValue(value, forKey: key)
+            }
         }
         
-        static func streetName() {
-            
+        // MARK: methods
+        public static func city() -> String {
+            return ""
         }
         
-        static func streetAddress() {
-            
+        public static func streetName() -> String {
+            return ""
         }
         
-        static func secondaryAddress() {
-            
+        public static func streetAddress() -> String {
+            return ""
         }
         
-        static func buildingNumber() {
-            
+        public static func secondaryAddress() -> String {
+            return ""
         }
         
-        static func timezone() {
-            
+        public static func buildingNumber() -> String {
+            return ""
         }
         
+        public static func timezone() -> String {
+            return ""
+        }
+        
+        public static func latitude() -> String {
+            let lat = ((Double.random() * 180.0) - 90.0)
+            return "\(lat)"
+        }
+        
+        public static func longitude() -> String {
+            let lon = ((Double.random() * 360.0) - 180.0)
+            return "\(lon)"
+        }
+        
+//        city:
+//        - "#{city_prefix} #{Name.first_name}#{city_suffix}"
+//        - "#{city_prefix} #{Name.first_name}"
+//        - "#{Name.first_name}#{city_suffix}"
+//        - "#{Name.last_name}#{city_suffix}"
+//        street_name:
+//        - "#{Name.first_name} #{street_suffix}"
+//        - "#{Name.last_name} #{street_suffix}"
+//        street_address:
+//        - "#{building_number} #{street_name}"
+//        default_country: [United States of America]
+//
+//
 //        alias_method :zip, :zip_code
 //        alias_method :postcode, :zip_code
 //        
@@ -44,13 +114,5 @@ extension Faker {
 //        def state;         fetch('address.state');         end
 //        def country;       fetch('address.country');       end
 //        def country_code;  fetch('address.country_code');  end
-//        
-//        def latitude
-//        ((rand * 180) - 90).to_s
-//        end
-//        
-//        def longitude
-//        ((rand * 360) - 180).to_s
-//        end
     }
 }

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9B454BD91BACDF6300C5D2CE /* SwiftyFaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B454BD81BACDF6300C5D2CE /* SwiftyFaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B454BE01BACDF6300C5D2CE /* SwiftyFaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B454BD51BACDF6300C5D2CE /* SwiftyFaker.framework */; settings = {ASSET_TAGS = (); }; };
-		9B454BE51BACDF6300C5D2CE /* SwiftyFakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B454BE41BACDF6300C5D2CE /* SwiftyFakerTests.swift */; };
 		9B454C1C1BACDFC300C5D2CE /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B454BF01BACDFC300C5D2CE /* Address.swift */; settings = {ASSET_TAGS = (); }; };
 		9B454C1D1BACDFC300C5D2CE /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B454BF11BACDFC300C5D2CE /* App.swift */; settings = {ASSET_TAGS = (); }; };
 		9B454C1E1BACDFC300C5D2CE /* Bitcoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B454BF21BACDFC300C5D2CE /* Bitcoin.swift */; settings = {ASSET_TAGS = (); }; };
@@ -56,6 +55,9 @@
 		9B454D6A1BAD110300C5D2CE /* NameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B454D691BAD110300C5D2CE /* NameTests.swift */; settings = {ASSET_TAGS = (); }; };
 		9B8A720E1BB04EE6005AAD34 /* LoremTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A720D1BB04EE6005AAD34 /* LoremTests.swift */; settings = {ASSET_TAGS = (); }; };
 		9B8A72111BB052B1005AAD34 /* FakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A72101BB052B1005AAD34 /* FakerTests.swift */; settings = {ASSET_TAGS = (); }; };
+		9B8A72741BB0D196005AAD34 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A72731BB0D196005AAD34 /* AddressTests.swift */; settings = {ASSET_TAGS = (); }; };
+		9B8A72781BB300FF005AAD34 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A72771BB300FF005AAD34 /* Random.swift */; settings = {ASSET_TAGS = (); }; };
+		9B8A727A1BB3045B005AAD34 /* RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A72791BB3045B005AAD34 /* RandomTests.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +75,6 @@
 		9B454BD81BACDF6300C5D2CE /* SwiftyFaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyFaker.h; sourceTree = "<group>"; };
 		9B454BDA1BACDF6300C5D2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B454BDF1BACDF6300C5D2CE /* SwiftyFakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyFakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B454BE41BACDF6300C5D2CE /* SwiftyFakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyFakerTests.swift; sourceTree = "<group>"; };
 		9B454BE61BACDF6300C5D2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B454BF01BACDFC300C5D2CE /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		9B454BF11BACDFC300C5D2CE /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -121,6 +122,9 @@
 		9B454D691BAD110300C5D2CE /* NameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameTests.swift; sourceTree = "<group>"; };
 		9B8A720D1BB04EE6005AAD34 /* LoremTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoremTests.swift; sourceTree = "<group>"; };
 		9B8A72101BB052B1005AAD34 /* FakerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakerTests.swift; sourceTree = "<group>"; };
+		9B8A72731BB0D196005AAD34 /* AddressTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressTests.swift; sourceTree = "<group>"; };
+		9B8A72771BB300FF005AAD34 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		9B8A72791BB3045B005AAD34 /* RandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 		9B454BD71BACDF6300C5D2CE /* SwiftyFaker */ = {
 			isa = PBXGroup;
 			children = (
+				9B8A72771BB300FF005AAD34 /* Random.swift */,
 				9B454C051BACDFC300C5D2CE /* Faker.swift */,
 				9B454BEF1BACDFC300C5D2CE /* faker */,
 				9B454C061BACDFC300C5D2CE /* json */,
@@ -175,10 +180,11 @@
 		9B454BE31BACDF6300C5D2CE /* SwiftyFakerTests */ = {
 			isa = PBXGroup;
 			children = (
-				9B8A720F1BB052A2005AAD34 /* Faker */,
-				9B454D671BAD10D600C5D2CE /* Name */,
-				9B454D681BAD10DE00C5D2CE /* Lorem */,
-				9B454BE41BACDF6300C5D2CE /* SwiftyFakerTests.swift */,
+				9B8A72791BB3045B005AAD34 /* RandomTests.swift */,
+				9B8A72101BB052B1005AAD34 /* FakerTests.swift */,
+				9B8A72731BB0D196005AAD34 /* AddressTests.swift */,
+				9B8A720D1BB04EE6005AAD34 /* LoremTests.swift */,
+				9B454D691BAD110300C5D2CE /* NameTests.swift */,
 				9B454BE61BACDF6300C5D2CE /* Info.plist */,
 			);
 			path = SwiftyFakerTests;
@@ -238,30 +244,6 @@
 				9B454C1B1BACDFC300C5D2CE /* university.json */,
 			);
 			path = json;
-			sourceTree = "<group>";
-		};
-		9B454D671BAD10D600C5D2CE /* Name */ = {
-			isa = PBXGroup;
-			children = (
-				9B454D691BAD110300C5D2CE /* NameTests.swift */,
-			);
-			name = Name;
-			sourceTree = "<group>";
-		};
-		9B454D681BAD10DE00C5D2CE /* Lorem */ = {
-			isa = PBXGroup;
-			children = (
-				9B8A720D1BB04EE6005AAD34 /* LoremTests.swift */,
-			);
-			name = Lorem;
-			sourceTree = "<group>";
-		};
-		9B8A720F1BB052A2005AAD34 /* Faker */ = {
-			isa = PBXGroup;
-			children = (
-				9B8A72101BB052B1005AAD34 /* FakerTests.swift */,
-			);
-			name = Faker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,6 +380,7 @@
 				9B454C1F1BACDFC300C5D2CE /* Book.swift in Sources */,
 				9B454C2E1BACDFC300C5D2CE /* Team.swift in Sources */,
 				9B454C251BACDFC300C5D2CE /* Date.swift in Sources */,
+				9B8A72781BB300FF005AAD34 /* Random.swift in Sources */,
 				9B454C1E1BACDFC300C5D2CE /* Bitcoin.swift in Sources */,
 				9B454C241BACDFC300C5D2CE /* Company.swift in Sources */,
 				9B454C2D1BACDFC300C5D2CE /* SlackEmoji.swift in Sources */,
@@ -423,9 +406,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B8A727A1BB3045B005AAD34 /* RandomTests.swift in Sources */,
 				9B454D6A1BAD110300C5D2CE /* NameTests.swift in Sources */,
-				9B454BE51BACDF6300C5D2CE /* SwiftyFakerTests.swift in Sources */,
 				9B8A720E1BB04EE6005AAD34 /* LoremTests.swift in Sources */,
+				9B8A72741BB0D196005AAD34 /* AddressTests.swift in Sources */,
 				9B8A72111BB052B1005AAD34 /* FakerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
