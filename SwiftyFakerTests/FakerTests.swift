@@ -20,4 +20,17 @@ class FakerTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+    
+    func testNumerify() {
+        XCTAssertFalse(Faker.numerify("####").containsString("#"), "should not contain #")
+    }
+    
+    func testLetterify() {
+        XCTAssertFalse(Faker.letterify("????").containsString("?"), "should not contain ?")
+    }
+    
+    func testBothify() {
+        XCTAssertFalse(Faker.bothify("????####").containsString("?"), "should not contain ?")
+        XCTAssertFalse(Faker.bothify("????####").containsString("#"), "should not contain #")
+    }
 }

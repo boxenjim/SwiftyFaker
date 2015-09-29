@@ -11,14 +11,14 @@ import Foundation
 /**
 Arc Random for Double and Float
 */
-public func arc4random <T: IntegerLiteralConvertible> (type: T.Type) -> T {
+func arc4random <T: IntegerLiteralConvertible> (type: T.Type) -> T {
     var r: T = 0
     arc4random_buf(&r, sizeof(T))
     return r
 }
 
-extension Int {
-    static func random(range: Range<Int> ) -> Int {
+public extension Int {
+    public static func random(range: Range<Int> ) -> Int {
         var offset = 0
         
         if range.startIndex < 0 {
@@ -32,8 +32,8 @@ extension Int {
     }
 }
 
-extension Double {
-    static func random(min: Double = 0.0, max: Double = 1.0) -> Double {
+public extension Double {
+    public static func random(min: Double = 0.0, max: Double = 1.0) -> Double {
         var offset = 0.0
         
         if min < 0.0 {
@@ -48,8 +48,8 @@ extension Double {
     }
 }
 
-extension Float {
-    static func random(min: Float = 0.0, max: Float = 1.0) -> Float {
+public extension Float {
+    public static func random(min: Float = 0.0, max: Float = 1.0) -> Float {
         var offset = Float(0.0)
         
         if min < 0.0 {
@@ -64,8 +64,8 @@ extension Float {
     }
 }
 
-extension Array {
-    func random() -> Element {
+public extension Array {
+    public func random() -> Element {
         let randInt = Int.random(0..<self.count)
         let obj = self[randInt]
         return obj

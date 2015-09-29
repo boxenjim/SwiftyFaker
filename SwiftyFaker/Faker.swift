@@ -9,6 +9,44 @@
 import UIKit
 
 public class Faker: NSObject {
+    internal static let ULetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+    internal static let Letters = Faker.ULetters + ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    
+    static func numerify(numberString: String) -> String {
+        let range = numberString.characters.startIndex...numberString.characters.startIndex
+        let numString = numberString.stringByReplacingCharactersInRange(range, withString: "\(Int.random(1...9))")
+        
+        var numerifiedString = ""
+        
+        for character in numString.characters {
+            if character == "#" {
+                numerifiedString += "\(Int.random(0...9))"
+            } else {
+                numerifiedString.append(character)
+            }
+        }
+        
+        return numerifiedString
+    }
+    
+    static func letterify(letterString: String) -> String {
+        var string = ""
+        for character in letterString.characters {
+            if character == "?" {
+                string += Faker.ULetters.random()
+            }
+            else {
+                string.append(character)
+            }
+        }
+        return string
+    }
+    
+    static func bothify(string: String) -> String {
+        return letterify(numerify(string))
+    }
+    
+    
     internal init(dictionary: [String : AnyObject]) {
         super.init()
         self.setValuesForKeysWithDictionary(dictionary)

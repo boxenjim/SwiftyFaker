@@ -58,11 +58,17 @@ extension Faker {
         
         // MARK: methods
         public static func city() -> String {
-            return ""
+            guard let prefixes = sharedAddress.city_prefixes else { return "" }
+            guard let suffixes = sharedAddress.city_suffixes else { return "" }
+            let prefix = prefixes.random()
+            let suffix = suffixes.random()
+            return "\(prefix) \(Name.firstName())\(suffix)"
         }
         
         public static func streetName() -> String {
-            return ""
+            guard let suffixes = sharedAddress.street_suffixes else { return "" }
+            let suffix = suffixes.random()
+            return "\(Name.lastName()) \(suffix)"
         }
         
         public static func streetAddress() -> String {
@@ -78,7 +84,9 @@ extension Faker {
         }
         
         public static func timezone() -> String {
-            return ""
+            guard let timezones = sharedAddress.time_zones else { return "" }
+            let timezone = timezones.random()
+            return "\(timezone)"
         }
         
         public static func latitude() -> String {
