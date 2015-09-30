@@ -15,6 +15,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        // Address
+        print(Faker.Address.streetAddress())
+        
+        // Name
         print(Faker.Name.name())
         print(Faker.Name.firstName())
         print(Faker.Name.lastName())

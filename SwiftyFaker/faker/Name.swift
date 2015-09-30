@@ -10,6 +10,7 @@ import Foundation
 
 extension Faker {
     public class Name: Faker {
+        private var names = ["\(Name.prefix()) \(Name.firstName()) \(Name.lastName())", "\(Name.firstName()) \(Name.lastName()) \(Name.suffix())", "\(Name.firstName()) \(Name.lastName())", "\(Name.firstName()) \(Name.lastName())", "\(Name.firstName()) \(Name.lastName())", "\(Name.firstName()) \(Name.lastName())"]
         private var first_names: [String]?
         private var last_names: [String]?
         private var prefixes: [String]?
@@ -49,7 +50,7 @@ extension Faker {
         
         // MARK: Name methods
         public static func name() -> String {
-            return firstName() + " " + lastName()
+            return sharedName.names.random()
         }
         
         public static func firstName() -> String {
@@ -85,11 +86,7 @@ extension Faker {
             guard let levels = sharedName.levels else { return "" }
             guard let jobs = sharedName.jobs else { return "" }
             
-            let descriptor = descriptors.random()
-            let level = levels.random()
-            let job = jobs.random()
-            
-            return descriptor + " " + level + " " + job
+            return descriptors.random() + " " + levels.random() + " " + jobs.random()
         }
     }
 }
