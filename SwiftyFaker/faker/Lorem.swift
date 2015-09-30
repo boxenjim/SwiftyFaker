@@ -9,14 +9,12 @@
 import Foundation
 
 extension Faker {
-    class Lorem: Faker {
+    public class Lorem: Faker {
         private var wrds: [String]?
         private var supplementals: [String]?
         
-        private static let sharedLorem = Lorem(dictionary: Faker.loremJSON())
-        
         // MARK: NSKeyValueCoding
-        override func setValue(value: AnyObject?, forKey key: String) {
+        public override func setValue(value: AnyObject?, forKey key: String) {
             if key == "word" {
                 wrds = value as? [String]
             } else if key == "supplemental" {
@@ -26,14 +24,24 @@ extension Faker {
             }
         }
         
+        private static let sharedLorem = Lorem(dictionary: Faker.loremJSON())
         
-        static func word() -> String {
+        // MARK: Public Lorem methods
+        public static func character() -> String {
+            return characters(1)
+        }
+        
+        public static func characters(charCount: Int = 255) -> String {
+            return ""
+        }
+        
+        public static func word() -> String {
             let wrds = words(1) as [String]
             let word = wrds.last!
             return word
         }
         
-        static func words(count: Int = 3, supplemental: Bool = false) -> [String] {
+        public static func words(count: Int = 3, supplemental: Bool = false) -> [String] {
             guard let wordsArray = sharedLorem.wrds else { return [String]() }
             guard let supplementals = sharedLorem.supplementals else { return [String]() }
             
@@ -47,10 +55,22 @@ extension Faker {
             return array
         }
         
-        static func sentence(wordCount: Int = 4, supplimental: Bool = false/*, randomWordsToAdd: Int = 6*/) -> String {
+        public static func sentence(wordCount: Int = 4, supplimental: Bool = false, randomWordsToAdd: Int = 6) -> String {
             let array = words(wordCount, supplemental: supplimental)
             let sentence = array.joinWithSeparator(" ")
             return sentence + "."
+        }
+        
+        public static func sentences(sentenceCount: Int = 3, supplemental: Bool = false) -> String  {
+            return ""
+        }
+        
+        public static func paragraph(sentenceCount: Int = 3, supplemental: Bool = false, randomSentencesToAdd: Int = 3) -> String  {
+            return ""
+        }
+        
+        public static func paragraphs(paragraphCount: Int = 3, supplemental: Bool = false) -> String {
+            return ""
         }
     }
 }

@@ -22,10 +22,10 @@ class AddressTests: XCTestCase {
         super.tearDown()
     }
     
-    func testBuildingNumber() {
-        let buildingNumber = Faker.Address.buildingNumber()
-        XCTAssertFalse(buildingNumber.isEmpty, "buildingNumber shouldn't be empty")
-    }
+//    func testBuildingNumber() {
+//        let buildingNumber = Faker.Address.buildingNumber()
+//        XCTAssertFalse(buildingNumber.isEmpty, "buildingNumber shouldn't be empty")
+//    }
 
     func testCity() {
         let city = Faker.Address.city()

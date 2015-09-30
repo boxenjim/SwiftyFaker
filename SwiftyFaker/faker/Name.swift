@@ -10,7 +10,6 @@ import Foundation
 
 extension Faker {
     public class Name: Faker {
-        private var names = ["\(Name.prefix()) \(Name.firstName()) \(Name.lastName())", "\(Name.firstName()) \(Name.lastName()) \(Name.suffix())", "\(Name.firstName()) \(Name.lastName())", "\(Name.firstName()) \(Name.lastName())", "\(Name.firstName()) \(Name.lastName())", "\(Name.firstName()) \(Name.lastName())"]
         private var first_names: [String]?
         private var last_names: [String]?
         private var prefixes: [String]?
@@ -29,8 +28,6 @@ extension Faker {
             return titles?["job"] as? [String]
         }
         
-        private static let sharedName = Name(dictionary: Faker.nameJSON())
-        
         // MARK: NSKeyValueCoding
         public override func setValue(value: AnyObject?, forKey key: String) {
             if key == "first_name" {
@@ -48,9 +45,21 @@ extension Faker {
             }
         }
         
-        // MARK: Name methods
+        private static let sharedName = Name(dictionary: Faker.nameJSON())
+        
+        // MARK: Private Name methods
+        private func names() -> [String] {
+            return ["\(Name.prefix()) \(Name.firstName()) \(Name.lastName())",
+                "\(Name.firstName()) \(Name.lastName()) \(Name.suffix())",
+                "\(Name.firstName()) \(Name.lastName())",
+                "\(Name.firstName()) \(Name.lastName())",
+                "\(Name.firstName()) \(Name.lastName())",
+                "\(Name.firstName()) \(Name.lastName())"]
+        }
+        
+        // MARK: Public Name methods
         public static func name() -> String {
-            return sharedName.names.random()
+            return sharedName.names().random()
         }
         
         public static func firstName() -> String {

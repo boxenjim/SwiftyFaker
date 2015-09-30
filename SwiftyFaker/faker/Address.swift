@@ -11,7 +11,6 @@ import Foundation
 extension Faker {
     public class Address: Faker {
         private var building_numbers: [String]?
-        private var cities = ["\(Address.cityPrefix()) \(Name.firstName())\(Address.citySuffix())", "\(Address.cityPrefix()) \(Name.firstName())", "\(Name.firstName())\(Address.citySuffix())", "\(Name.lastName())\(Address.citySuffix())"]
         private var city_prefixes: [String]?
         private var city_suffixes: [String]?
         private var countries: [String]?
@@ -22,12 +21,8 @@ extension Faker {
         private var secondary_addresses: [String]?
         private var states: [String]?
         private var states_abbr: [String]?
-        private var street_addresses = ["\(Address.buildingNumber()) \(Address.streetName())"]
-        private var street_names = ["\(Name.firstName()) \(Address.citySuffix())", "\(Name.lastName()) \(Address.citySuffix())"]
         private var street_suffixes: [String]?
         private var time_zones: [String]?
-        
-        private static let sharedAddress = Address(dictionary: Faker.addressJSON())
         
         // MARK: NSKeyValueCoding
         public override func setValue(value: AnyObject?, forKey key: String) {
@@ -62,14 +57,32 @@ extension Faker {
             }
         }
         
-        // MARK: Address methods
+        private static let sharedAddress = Address(dictionary: Faker.addressJSON())
+        
+        // MARK: Private Address methods
+        private func cities() -> [String] {
+            return ["\(Address.cityPrefix()) \(Name.firstName())\(Address.citySuffix())",
+                "\(Address.cityPrefix()) \(Name.firstName())",
+                "\(Name.firstName())\(Address.citySuffix())",
+                "\(Name.lastName())\(Address.citySuffix())"]
+        }
+        
+        private func street_addresses() -> [String] {
+            return ["\(Address.buildingNumber()) \(Address.streetName())"]
+        }
+        
+        private func street_names() -> [String] {
+            return ["\(Name.firstName()) \(Address.citySuffix())", "\(Name.lastName()) \(Address.citySuffix())"]
+        }
+        
+        // MARK: Public Address methods
         public static func buildingNumber() -> String {
             guard let buildingNumber = sharedAddress.building_numbers?.random() else { return "" }
             return numerify(buildingNumber)
         }
         
         public static func city() -> String {
-            return sharedAddress.cities.random()
+            return sharedAddress.cities().random()
         }
         
         public static func cityPrefix() -> String {
@@ -122,11 +135,13 @@ extension Faker {
         }
         
         public static func streetAddress(includeSecondary: Bool = false) -> String {
-            return numerify(sharedAddress.street_addresses.random() + (includeSecondary ? " " + secondaryAddress() : ""))
+            let address = sharedAddress.street_addresses().random()
+            return numerify(address + (includeSecondary ? " " + secondaryAddress() : ""))
         }
         
         public static func streetName() -> String {
-            return sharedAddress.street_names.random()
+            let name = sharedAddress.street_names().random()
+            return name
         }
         
         public static func streetSuffix() -> String {
