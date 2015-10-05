@@ -4,7 +4,7 @@
 <!--![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)-->
 
 
-A fake data generator written in Swift. Inspired by the amazing [Ruby](https://www.ruby-lang.org/en/) [gem](https://rubygems.org) [Faker](https://github.com/stympy/faker). 
+A fake data generator written in Swift. Inspired by and Aspiring to be as amazing as the [Ruby](https://www.ruby-lang.org/en/) [gem](https://rubygems.org), [Faker](https://github.com/stympy/faker). 
 
 ## Usage
 --------
