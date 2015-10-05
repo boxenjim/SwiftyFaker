@@ -10,6 +10,8 @@ import Foundation
 
 extension Faker {
     public class Company: Faker {
-        
+        static func name() -> String {
+            return ""
+        }
     }
 }

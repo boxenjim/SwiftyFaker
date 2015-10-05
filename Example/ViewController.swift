@@ -39,6 +39,9 @@ class ViewController: UIViewController {
         
         // App
         print("***** App *****")
+        print(Faker.App.name())
+        print(Faker.App.appVersion())
+        print(Faker.App.author())
         print("")
         
         // Bitcoin

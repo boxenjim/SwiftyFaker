@@ -67,6 +67,11 @@ public class Faker: NSObject {
         return name
     }
     
+    internal static func appJSON() -> [String : AnyObject] {
+        guard let app = readjson("app") as? [String : AnyObject] else { return [String : AnyObject]() }
+        return app
+    }
+    
     internal static func loremJSON() -> [String : AnyObject] {
         guard let name = readjson("lorem") as? [String : AnyObject] else { return [String : AnyObject]() }
         return name
