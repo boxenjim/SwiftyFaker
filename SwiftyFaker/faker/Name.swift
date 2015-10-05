@@ -45,7 +45,7 @@ extension Faker {
             }
         }
         
-        private static let sharedName = Name(dictionary: Faker.nameJSON())
+        private static let _name = Name(dictionary: Faker.nameJSON())
         
         // MARK: Private Name methods
         private func names() -> [String] {
@@ -59,29 +59,29 @@ extension Faker {
         
         // MARK: Public Name methods
         public static func name() -> String {
-            return sharedName.names().random()
+            return _name.names().random()
         }
         
         public static func firstName() -> String {
-            guard let fnames = sharedName.first_names else { return "" }
+            guard let fnames = _name.first_names else { return "" }
             let fname = fnames.random()
             return fname
         }
         
         public static func lastName() -> String {
-            guard let lnames = sharedName.last_names else { return "" }
+            guard let lnames = _name.last_names else { return "" }
             let lname = lnames.random()
             return lname
         }
         
         public static func prefix() -> String {
-            guard let prefixes = sharedName.prefixes else { return "" }
+            guard let prefixes = _name.prefixes else { return "" }
             let prfx = prefixes.random()
             return prfx
         }
         
         public static func suffix() -> String {
-            guard let suffixes = sharedName.suffixes else { return "" }
+            guard let suffixes = _name.suffixes else { return "" }
             let sffx = suffixes.random()
             return sffx
         }
@@ -91,9 +91,9 @@ extension Faker {
             Wordlist from http://www.bullshitjob.com/title/
         */
         public static func title() -> String {
-            guard let descriptors = sharedName.descriptors else { return "" }
-            guard let levels = sharedName.levels else { return "" }
-            guard let jobs = sharedName.jobs else { return "" }
+            guard let descriptors = _name.descriptors else { return "" }
+            guard let levels = _name.levels else { return "" }
+            guard let jobs = _name.jobs else { return "" }
             
             return descriptors.random() + " " + levels.random() + " " + jobs.random()
         }

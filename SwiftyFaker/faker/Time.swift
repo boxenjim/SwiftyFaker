@@ -9,7 +9,7 @@
 import Foundation
 
 extension Faker {
-    class Time: Faker {
+    public class Time: Faker {
         
     }
 }

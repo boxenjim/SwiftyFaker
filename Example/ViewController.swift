@@ -39,6 +39,9 @@ class ViewController: UIViewController {
         
         // App
         print("***** App *****")
+        print(Faker.App.name())
+        print(Faker.App.appVersion())
+        print(Faker.App.author())
         print("")
         
         // Bitcoin
@@ -67,6 +70,15 @@ class ViewController: UIViewController {
         
         // Company
         print("***** Company *****")
+        print(Faker.Company.name())
+        print(Faker.Company.suffix())
+        print(Faker.Company.catchPhrase())
+        print(Faker.Company.buzzword())
+        print(Faker.Company.bs())
+        print(Faker.Company.ein())
+        print(Faker.Company.dunsNumber())
+        print(Faker.Company.logo())
+        print(Faker.Company.swedishOrganisationNumber())
         print("")
         
         // Date

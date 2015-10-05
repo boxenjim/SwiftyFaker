@@ -24,7 +24,7 @@ extension Faker {
             }
         }
         
-        private static let sharedLorem = Lorem(dictionary: Faker.loremJSON())
+        private static let _lorem = Lorem(dictionary: Faker.loremJSON())
         
         // MARK: Public Lorem methods
         public static func character() -> String {
@@ -42,8 +42,8 @@ extension Faker {
         }
         
         public static func words(count: Int = 3, supplemental: Bool = false) -> [String] {
-            guard let wordsArray = sharedLorem.wrds else { return [String]() }
-            guard let supplementals = sharedLorem.supplementals else { return [String]() }
+            guard let wordsArray = _lorem.wrds else { return [String]() }
+            guard let supplementals = _lorem.supplementals else { return [String]() }
             
             var array = [String]()
             
