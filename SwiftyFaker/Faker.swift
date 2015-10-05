@@ -16,7 +16,7 @@ public class Faker: NSObject {
         let range = numberString.characters.startIndex...numberString.characters.startIndex
         var numberString = numberString
         
-        if intConvertable {
+        if intConvertable && numberString.characters.first == "#" {
             numberString = numberString.stringByReplacingCharactersInRange(range, withString: "\(Int.random(1...9))")
         }
         

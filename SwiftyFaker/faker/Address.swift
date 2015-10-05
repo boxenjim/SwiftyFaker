@@ -72,7 +72,7 @@ extension Faker {
         }
         
         private func street_names() -> [String] {
-            return ["\(Name.firstName()) \(Address.citySuffix())", "\(Name.lastName()) \(Address.citySuffix())"]
+            return ["\(Name.firstName()) \(Address.streetSuffix())", "\(Name.lastName()) \(Address.streetSuffix())"]
         }
         
         // MARK: Public Address methods
