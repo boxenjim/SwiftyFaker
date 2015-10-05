@@ -11,5 +11,14 @@ import Foundation
 extension Faker {
     public class Bitcoin: Faker {
         
+        
+        // MARK: Methods
+        public static func address() {
+            
+        }
+        
+        public static func testnetAddress() {
+            
+        }
     }
 }

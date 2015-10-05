@@ -66,29 +66,9 @@ public class Faker: NSObject {
     }
     
     // MARK: helpers
-    internal static func addressJSON() -> [String : AnyObject] {
-        guard let name = readjson("address") as? [String : AnyObject] else { return [String : AnyObject]() }
-        return name
-    }
-    
-    internal static func appJSON() -> [String : AnyObject] {
-        guard let app = readjson("app") as? [String : AnyObject] else { return [String : AnyObject]() }
+    internal static func JSON(key: String) -> [String : AnyObject] {
+        guard let app = readjson(key) as? [String : AnyObject] else { return [String : AnyObject]() }
         return app
-    }
-    
-    internal static func companyJSON() -> [String : AnyObject] {
-        guard let company = readjson("company") as? [String : AnyObject] else { return [String : AnyObject]() }
-        return company
-    }
-    
-    internal static func loremJSON() -> [String : AnyObject] {
-        guard let name = readjson("lorem") as? [String : AnyObject] else { return [String : AnyObject]() }
-        return name
-    }
-    
-    internal static func nameJSON() -> [String : AnyObject] {
-        guard let name = readjson("name") as? [String : AnyObject] else { return [String : AnyObject]() }
-        return name
     }
     
     internal static func readjson(fileName: String) -> AnyObject? {

@@ -24,7 +24,7 @@ extension Faker {
             }
         }
         
-        private static let _app = App(dictionary: Faker.appJSON())
+        private static let _app = App(dictionary: Faker.JSON("app"))
         
         // MARK: Private Address methods
         private func authors() -> [String] {

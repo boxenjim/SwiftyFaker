@@ -27,7 +27,7 @@ extension Faker {
             }
         }
         
-        private static let company = Company(dictionary: Faker.companyJSON())
+        private static let company = Company(dictionary: Faker.JSON("company"))
         
         // MARK: Private methods
         private func names() -> [String] {
