@@ -6,6 +6,158 @@
 A fake data generator written in Swift. Inspired by the amazing [Ruby](https://www.ruby-lang.org/en/) [gem](https://rubygems.org) [Faker](https://github.com/stympy/faker). 
 
 ## Usage
+--------
+```swift
+Faker.Name.name() -> "Nellie Buckridge Jr."
+Faker.Lorem.sentence() -> "voluptas consequatur magnam harum."
+```
+
+## Faker.Address
+----------------
+```swift
+Faker.Address.buildingNumber() -> "83617"
+Faker.Address.city() -> "Lake Derrickport"
+Faker.Address.cityPrefix() -> "Port"
+Faker.Address.citySuffix() -> "ton"
+Faker.Address.country() -> "Zambia"
+Faker.Address.countyCode() -> "FO"
+Faker.Address.latitude() -> "-17.1575853332711"
+Faker.Address.longitude() -> "74.6779822763161"
+Faker.Address.postcode() -> "10816-7015"
+Faker.Address.secondaryAddress() -> "Suite 866"
+Faker.Address.state() -> "Missouri"
+Faker.Address.stateAbbr() -> "AK"
+Faker.Address.streetAddress() -> "659 Blanda Plains"
+Faker.Address.steetName() -> "Casandra Shore"
+Faker.Address.streetSuffix() -> "Avenue"
+Faker.Address.timezone() -> "Europe/Bucharest"
+Faker.Address.zip() -> "53097-3343"
+Faker.Address.zipCode() -> "82782"
+```
+
+## Faker.App
+----------------
+```swift
+Faker.App.name() -> "Alphazap"
+Faker.App.appVersion() -> "1.5.2"
+Faker.App.author() -> "Otha Braun"
+```
+
+<!--## Faker.Bitcoin-->
+<!-------------------->
+<!--```swift-->
+<!--```-->
+
+## Faker.Book
+----------------
+```swift
+Faker.Book.title() -> "The Zookeeper and Her Tiger"
+Faker.Book.author() -> "Janie Bashirian"
+Faker.Book.publisher() -> "Parker Publishing"
+```
+
+<!--## Faker.Business-->
+<!-------------------->
+<!--```swift-->
+<!--```-->
+
+<!--## Faker.Code-->
+<!-------------------->
+<!--```swift-->
+<!--```-->
+
+<!--## Faker.Color-->
+<!-------------------->
+<!--```swift-->
+<!--```-->
+
+<!--## Faker.Commerce-->
+<!-------------------->
+<!--```swift-->
+<!--```-->
+
+## Faker.Company
+----------------
+```swift
+Faker.Company.name() -> "Labadie-Wisoky"
+Faker.Comany.suffix() -> "and Sons"
+Faker.Company.catchPhrase() -> "Public-key context-sensitive core"
+Faker.Company.buzzword() -> "Enhanced"
+Faker.Company.bs() -> "streamline scalable e-business"
+Faker.Company.ein() -> "82-8784359"
+Faker.Company.dunNumber() -> "57-381-4056"
+Faker.Company.logo() -> "http://pigment.github.io/fake-logos/logos/medium/color/10.png"
+Faker.Company.swedishOrganisationNumber() -> "57189359064"
+```
+
+<!--## Faker.Date-->
+<!-------------------->
+<!--```swift-->
+<!--```-->
+
+<!--## Faker.Finance-->
+<!-------------------->
+<!--```swift-->
+<!--```-->
+
+<!--## Faker.Hacker-->
+<!-------------------->
+<!--```swift-->
+<!--```-->
+
+<!--## Faker.Internet-->
+<!-------------------->
+<!--```swift-->
+<!--```-->
+
+## Faker.Lorem
+----------------
+```swift
+Faker.Lorem.word() -> "sed"
+Faker.Lorem.words() -> ["vel", "officia", "perferendis"]
+Faker.Lorem.sentence() -> "dicta ipsum eveniet recusandae."
+```
+
+## Faker.Name
+----------------
+```swift
+Faker.Name.name() -> "Mrs. Grant Wilkinson"
+Faker.Name.firstName() -> "Willy"
+Faker.Name.lastName() -> "Rolfson"
+Faker.Name.prefix() -> "Ms."
+Faker.Name.suffix() -> "II"
+Faker.Name.Title() -> "Future Identity Inspector"
+```
+
+<!--## Faker.Number-->
+<!-------------------->
+<!--```swift-->
+<!--```-->
+
+<!--## Faker.PhoneNumber-->
+<!-------------------->
+<!--```swift-->
+<!--```-->
+
+<!--## Faker.SlackEmoji-->
+<!-------------------->
+<!--```swift-->
+<!--```-->
+
+<!--## Faker.Team-->
+<!-------------------->
+<!--```swift-->
+<!--```-->
+
+<!--## Faker.Time-->
+<!-------------------->
+<!--```swift-->
+<!--```-->
+
+<!--## Faker.University-->
+<!-------------------->
+<!--```swift-->
+<!--```-->
 
 ## Installation
 
@@ -13,7 +165,7 @@ A fake data generator written in Swift. Inspired by the amazing [Ruby](https://w
 
 Add the following line to your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile).
 
-```
+```ogdl
 github "boxenjim/SwiftyFaker"
 ```
 
