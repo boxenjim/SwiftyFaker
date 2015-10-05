@@ -15,7 +15,7 @@ Faker.Lorem.sentence() -> "voluptas consequatur magnam harum."
 ## Faker.Address
 ----------------
 ```swift
-Faker.Address.buildingNumber() -> "83617"
+Faker.Address.buildingNumber() -> "220"
 Faker.Address.city() -> "Lake Derrickport"
 Faker.Address.cityPrefix() -> "Port"
 Faker.Address.citySuffix() -> "ton"
