@@ -1,6 +1,7 @@
 # SwiftyFaker
 
-[![Build Status](https://travis-ci.org/boxenjim/SwiftyFaker.svg)](https://travis-ci.org/boxenjim/SwiftyFaker) ![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat) [![Join the chat at https://gitter.im/boxenjim/SwiftyFaker](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/boxenjim/SwiftyFaker?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://travis-ci.org/boxenjim/SwiftyFaker.svg)](https://travis-ci.org/boxenjim/SwiftyFaker) [![Join the chat at https://gitter.im/boxenjim/SwiftyFaker](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/boxenjim/SwiftyFaker?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) 
+<!--![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)-->
 
 
 A fake data generator written in Swift. Inspired by the amazing [Ruby](https://www.ruby-lang.org/en/) [gem](https://rubygems.org) [Faker](https://github.com/stympy/faker). 
@@ -159,17 +160,17 @@ Faker.Name.Title() -> "Future Identity Inspector"
 <!--```swift-->
 <!--```-->
 
-## Installation
+<!--## Installation-->
 
-#### Carthage
+<!--#### Carthage-->
 
-Add the following line to your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile).
+<!--Add the following line to your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile).-->
 
-```ogdl
-github "boxenjim/SwiftyFaker"
-```
+<!--```ogdl-->
+<!--github "boxenjim/SwiftyFaker"-->
+<!--```-->
 
-Then run `carthage update`.
+<!--Then run `carthage update`.-->
 
 <!--#### Cocoapods-->
 
