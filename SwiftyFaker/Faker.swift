@@ -12,13 +12,17 @@ public class Faker: NSObject {
     internal static let ULetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     internal static let Letters = Faker.ULetters + ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     
-    static func numerify(numberString: String) -> String {
+    static func numerify(numberString: String, intConvertable: Bool = true) -> String {
         let range = numberString.characters.startIndex...numberString.characters.startIndex
-        let numString = numberString.stringByReplacingCharactersInRange(range, withString: "\(Int.random(1...9))")
+        var numberString = numberString
+        
+        if intConvertable {
+            numberString = numberString.stringByReplacingCharactersInRange(range, withString: "\(Int.random(1...9))")
+        }
         
         var numerifiedString = ""
         
-        for character in numString.characters {
+        for character in numberString.characters {
             if character == "#" {
                 numerifiedString += "\(Int.random(0...9))"
             } else {

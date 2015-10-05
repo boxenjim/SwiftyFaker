@@ -73,11 +73,11 @@ extension Faker {
         }
         
         public static func ein() -> String {
-            return ""
+            return numerify("##-#######", intConvertable: false)
         }
         
         public static func dunsNumber() -> String {
-            return ""
+            return numerify("##-###-####", intConvertable: false)
         }
         
         public static func logo() -> String {
@@ -86,7 +86,7 @@ extension Faker {
         }
         
         public static func swedishOrganisationNumber() -> String {
-            return ""
+            return numerify("###########")
         }
     }
 }
