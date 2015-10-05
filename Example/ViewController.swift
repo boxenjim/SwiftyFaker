@@ -70,6 +70,15 @@ class ViewController: UIViewController {
         
         // Company
         print("***** Company *****")
+        print(Faker.Company.name())
+        print(Faker.Company.suffix())
+        print(Faker.Company.catchPhrase())
+        print(Faker.Company.buzzword())
+        print(Faker.Company.bs())
+        print(Faker.Company.ein())
+        print(Faker.Company.dunsNumber())
+        print(Faker.Company.logo())
+        print(Faker.Company.swedishOrganisationNumber())
         print("")
         
         // Date

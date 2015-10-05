@@ -57,7 +57,7 @@ extension Faker {
             }
         }
         
-        private static let sharedAddress = Address(dictionary: Faker.addressJSON())
+        private static let _address = Address(dictionary: Faker.addressJSON())
         
         // MARK: Private Address methods
         private func cities() -> [String] {
@@ -77,31 +77,31 @@ extension Faker {
         
         // MARK: Public Address methods
         public static func buildingNumber() -> String {
-            guard let buildingNumber = sharedAddress.building_numbers?.random() else { return "" }
+            guard let buildingNumber = _address.building_numbers?.random() else { return "" }
             return numerify(buildingNumber)
         }
         
         public static func city() -> String {
-            return sharedAddress.cities().random()
+            return _address.cities().random()
         }
         
         public static func cityPrefix() -> String {
-            guard let prefixes = sharedAddress.city_prefixes else { return "" }
+            guard let prefixes = _address.city_prefixes else { return "" }
             return prefixes.random()
         }
         
         public static func citySuffix() -> String {
-            guard let suffixes = sharedAddress.city_suffixes else { return "" }
+            guard let suffixes = _address.city_suffixes else { return "" }
             return suffixes.random()
         }
         
         public static func country() -> String {
-            guard let country = sharedAddress.countries?.random() else { return "" }
+            guard let country = _address.countries?.random() else { return "" }
             return country
         }
         
         public static func countryCode() -> String {
-            guard let countryCode = sharedAddress.country_codes?.random() else { return "" }
+            guard let countryCode = _address.country_codes?.random() else { return "" }
             return countryCode
         }
         
@@ -120,37 +120,37 @@ extension Faker {
         }
         
         public static func secondaryAddress() -> String {
-            guard let secondaryAddress = sharedAddress.secondary_addresses?.random() else { return "" }
+            guard let secondaryAddress = _address.secondary_addresses?.random() else { return "" }
             return numerify(secondaryAddress)
         }
         
         public static func state() -> String {
-            guard let state = sharedAddress.states?.random() else { return "" }
+            guard let state = _address.states?.random() else { return "" }
             return state
         }
         
         public static func stateAbbr() -> String {
-            guard let stateAbbr = sharedAddress.states_abbr?.random() else { return "" }
+            guard let stateAbbr = _address.states_abbr?.random() else { return "" }
             return stateAbbr
         }
         
         public static func streetAddress(includeSecondary: Bool = false) -> String {
-            let address = sharedAddress.street_addresses().random()
+            let address = _address.street_addresses().random()
             return numerify(address + (includeSecondary ? " " + secondaryAddress() : ""))
         }
         
         public static func streetName() -> String {
-            let name = sharedAddress.street_names().random()
+            let name = _address.street_names().random()
             return name
         }
         
         public static func streetSuffix() -> String {
-            guard let streetSuffixes = sharedAddress.street_suffixes else { return "" }
+            guard let streetSuffixes = _address.street_suffixes else { return "" }
             return streetSuffixes.random()
         }
         
         public static func timezone() -> String {
-            guard let timezones = sharedAddress.time_zones else { return "" }
+            guard let timezones = _address.time_zones else { return "" }
             return timezones.random()
         }
         
@@ -164,11 +164,11 @@ extension Faker {
         */
         public static func zipCode(stateAbbreviation: String = "") -> String {
             if stateAbbreviation == "" {
-                guard let postCode = sharedAddress.postcodes?.random() else { return "" }
+                guard let postCode = _address.postcodes?.random() else { return "" }
                 return bothify(postCode)
             }
             
-            guard let postCode = sharedAddress.postcodes_by_state?.random() else { return "" }
+            guard let postCode = _address.postcodes_by_state?.random() else { return "" }
             return bothify(postCode + stateAbbreviation)
         }
     }

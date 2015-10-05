@@ -54,6 +54,7 @@
 		9B454C461BACDFC300C5D2CE /* university.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B454C1B1BACDFC300C5D2CE /* university.json */; settings = {ASSET_TAGS = (); }; };
 		9B454D6A1BAD110300C5D2CE /* NameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B454D691BAD110300C5D2CE /* NameTests.swift */; settings = {ASSET_TAGS = (); }; };
 		9B4B0C511BC2227D004F1BE6 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B0C501BC2227D004F1BE6 /* AppTests.swift */; settings = {ASSET_TAGS = (); }; };
+		9B4B0C531BC22CF0004F1BE6 /* CompanyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B0C521BC22CF0004F1BE6 /* CompanyTests.swift */; settings = {ASSET_TAGS = (); }; };
 		9B8A720E1BB04EE6005AAD34 /* LoremTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A720D1BB04EE6005AAD34 /* LoremTests.swift */; settings = {ASSET_TAGS = (); }; };
 		9B8A72111BB052B1005AAD34 /* FakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A72101BB052B1005AAD34 /* FakerTests.swift */; settings = {ASSET_TAGS = (); }; };
 		9B8A72741BB0D196005AAD34 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A72731BB0D196005AAD34 /* AddressTests.swift */; settings = {ASSET_TAGS = (); }; };
@@ -122,6 +123,7 @@
 		9B454C1B1BACDFC300C5D2CE /* university.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = university.json; sourceTree = "<group>"; };
 		9B454D691BAD110300C5D2CE /* NameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameTests.swift; sourceTree = "<group>"; };
 		9B4B0C501BC2227D004F1BE6 /* AppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTests.swift; sourceTree = "<group>"; };
+		9B4B0C521BC22CF0004F1BE6 /* CompanyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyTests.swift; sourceTree = "<group>"; };
 		9B8A720D1BB04EE6005AAD34 /* LoremTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoremTests.swift; sourceTree = "<group>"; };
 		9B8A72101BB052B1005AAD34 /* FakerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakerTests.swift; sourceTree = "<group>"; };
 		9B8A72731BB0D196005AAD34 /* AddressTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressTests.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			children = (
 				9B8A72731BB0D196005AAD34 /* AddressTests.swift */,
 				9B4B0C501BC2227D004F1BE6 /* AppTests.swift */,
+				9B4B0C521BC22CF0004F1BE6 /* CompanyTests.swift */,
 				9B8A720D1BB04EE6005AAD34 /* LoremTests.swift */,
 				9B454D691BAD110300C5D2CE /* NameTests.swift */,
 				9B8A72791BB3045B005AAD34 /* RandomTests.swift */,
@@ -414,6 +417,7 @@
 				9B8A720E1BB04EE6005AAD34 /* LoremTests.swift in Sources */,
 				9B8A72741BB0D196005AAD34 /* AddressTests.swift in Sources */,
 				9B8A72111BB052B1005AAD34 /* FakerTests.swift in Sources */,
+				9B4B0C531BC22CF0004F1BE6 /* CompanyTests.swift in Sources */,
 				9B4B0C511BC2227D004F1BE6 /* AppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

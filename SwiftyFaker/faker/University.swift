@@ -9,7 +9,7 @@
 import Foundation
 
 extension Faker {
-    class University: Faker {
+    public class University: Faker {
         
     }
 }

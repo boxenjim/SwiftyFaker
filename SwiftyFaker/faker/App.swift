@@ -24,7 +24,7 @@ extension Faker {
             }
         }
         
-        private static let sharedApp = App(dictionary: Faker.appJSON())
+        private static let _app = App(dictionary: Faker.appJSON())
         
         // MARK: Private Address methods
         private func authors() -> [String] {
@@ -33,17 +33,17 @@ extension Faker {
         
         // MARK: Methods
         public static func name() -> String {
-            guard let names = sharedApp.names else { return "" }
+            guard let names = _app.names else { return "" }
             return names.random()
         }
         
         public static func appVersion() -> String {
-            guard let versions = sharedApp.versions else { return "" }
+            guard let versions = _app.versions else { return "" }
             return numerify(versions.random())
         }
         
         public static func author() -> String {
-            return sharedApp.authors().random()
+            return _app.authors().random()
         }
     }
 }
