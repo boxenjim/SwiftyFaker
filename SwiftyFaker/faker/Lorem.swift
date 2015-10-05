@@ -24,7 +24,7 @@ extension Faker {
             }
         }
         
-        private static let _lorem = Lorem(dictionary: Faker.loremJSON())
+        private static let _lorem = Lorem(dictionary: Faker.JSON("lorem"))
         
         // MARK: Public Lorem methods
         public static func character() -> String {

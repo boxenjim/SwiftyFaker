@@ -45,7 +45,7 @@ extension Faker {
             }
         }
         
-        private static let _name = Name(dictionary: Faker.nameJSON())
+        private static let _name = Name(dictionary: Faker.JSON("name"))
         
         // MARK: Private Name methods
         private func names() -> [String] {
