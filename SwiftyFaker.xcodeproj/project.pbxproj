@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9B3764E51BC2DFF500EABF51 /* BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3764E41BC2DFF500EABF51 /* BookTests.swift */; settings = {ASSET_TAGS = (); }; };
+		9B3764E81BC3481400EABF51 /* BusinessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3764E71BC3481400EABF51 /* BusinessTests.swift */; settings = {ASSET_TAGS = (); }; };
 		9B454BD91BACDF6300C5D2CE /* SwiftyFaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B454BD81BACDF6300C5D2CE /* SwiftyFaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B454BE01BACDF6300C5D2CE /* SwiftyFaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B454BD51BACDF6300C5D2CE /* SwiftyFaker.framework */; settings = {ASSET_TAGS = (); }; };
 		9B454C1C1BACDFC300C5D2CE /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B454BF01BACDFC300C5D2CE /* Address.swift */; settings = {ASSET_TAGS = (); }; };
@@ -75,6 +76,7 @@
 
 /* Begin PBXFileReference section */
 		9B3764E41BC2DFF500EABF51 /* BookTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTests.swift; sourceTree = "<group>"; };
+		9B3764E71BC3481400EABF51 /* BusinessTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessTests.swift; sourceTree = "<group>"; };
 		9B454BD51BACDF6300C5D2CE /* SwiftyFaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyFaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B454BD81BACDF6300C5D2CE /* SwiftyFaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyFaker.h; sourceTree = "<group>"; };
 		9B454BDA1BACDF6300C5D2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				9B8A72731BB0D196005AAD34 /* AddressTests.swift */,
 				9B4B0C501BC2227D004F1BE6 /* AppTests.swift */,
 				9B3764E41BC2DFF500EABF51 /* BookTests.swift */,
+				9B3764E71BC3481400EABF51 /* BusinessTests.swift */,
 				9B4B0C521BC22CF0004F1BE6 /* CompanyTests.swift */,
 				9B8A720D1BB04EE6005AAD34 /* LoremTests.swift */,
 				9B454D691BAD110300C5D2CE /* NameTests.swift */,
@@ -423,6 +426,7 @@
 				9B8A72111BB052B1005AAD34 /* FakerTests.swift in Sources */,
 				9B4B0C531BC22CF0004F1BE6 /* CompanyTests.swift in Sources */,
 				9B4B0C511BC2227D004F1BE6 /* AppTests.swift in Sources */,
+				9B3764E81BC3481400EABF51 /* BusinessTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,10 +1,10 @@
 # SwiftyFaker
 
-[![Build Status](https://travis-ci.org/boxenjim/SwiftyFaker.svg)](https://travis-ci.org/boxenjim/SwiftyFaker) [![Join the chat at https://gitter.im/boxenjim/SwiftyFaker](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/boxenjim/SwiftyFaker?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) 
+[![Build Status](https://travis-ci.org/boxenjim/SwiftyFaker.svg)](https://travis-ci.org/boxenjim/SwiftyFaker) [![Join the chat at https://gitter.im/boxenjim/SwiftyFaker](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/boxenjim/SwiftyFaker?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 <!--![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)-->
 
 
-A fake data generator written in Swift. Inspired by and Aspiring to be as amazing as the [Ruby](https://www.ruby-lang.org/en/) [gem](https://rubygems.org), [Faker](https://github.com/stympy/faker). 
+A fake data generator written in Swift. Inspired by and Aspiring to be as amazing as the [Ruby](https://www.ruby-lang.org/en/) [gem](https://rubygems.org), [Faker](https://github.com/stympy/faker).
 
 ## Usage
 --------
@@ -37,7 +37,7 @@ Faker.Address.zipCode() -> "82782"
 ```
 
 ## Faker.App
-----------------
+------------
 ```swift
 Faker.App.name() -> "Alphazap"
 Faker.App.appVersion() -> "1.5.2"
@@ -50,17 +50,20 @@ Faker.App.author() -> "Otha Braun"
 <!--```-->
 
 ## Faker.Book
-----------------
+-------------
 ```swift
 Faker.Book.title() -> "The Zookeeper and Her Tiger"
 Faker.Book.author() -> "Janie Bashirian"
 Faker.Book.publisher() -> "Parker Publishing"
 ```
 
-<!--## Faker.Business-->
-<!-------------------->
-<!--```swift-->
-<!--```-->
+## Faker.Business
+-----------------
+```swift-->
+Faker.Business.creditCardNumber() -> "1234-2121-1221-1211"
+Faker.Business.creditCardExpiry() -> 2019-10-05 06:00:00 +0000
+Faker.Business.creditCardType() -> "discover"
+```
 
 <!--## Faker.Code-->
 <!-------------------->

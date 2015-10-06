@@ -57,6 +57,9 @@ class ViewController: UIViewController {
         
         // Business
         print("***** Business *****")
+        print("CREDIT_CARD_NUMBER: \(Faker.Business.creditCardNumber())")
+        print("CREDIT_CARD_EXPIRY: \(Faker.Business.creditCardExpiry())")
+        print("CREDIT_CARD_TYPE: \(Faker.Business.creditCardType())")
         print("")
         
         // Code
