@@ -33,9 +33,7 @@ extension Faker {
         }
         
         public static func creditCardExpiry() -> NSDate {
-            let calendar = NSCalendar.currentCalendar()
-            let comps = calendar.components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day], fromDate: NSDate())
-            guard let normalizedNow = calendar.dateFromComponents(comps) else { return NSDate() }
+            let normalizedNow = NSCalendar.currentCalendar().startOfDayForDate(NSDate())
             guard let expiry = NSCalendar.currentCalendar().dateByAddingUnit(NSCalendarUnit.Year, value: Int.random(1...4), toDate: normalizedNow, options: NSCalendarOptions()) else { return NSDate() }
             return expiry
         }
