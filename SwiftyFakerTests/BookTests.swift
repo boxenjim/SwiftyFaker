@@ -35,5 +35,4 @@ class BookTests: XCTestCase {
         let publisher = Faker.Book.publisher()
         XCTAssertFalse(publisher.isEmpty, "publisher should not be empty")
     }
-    
 }
