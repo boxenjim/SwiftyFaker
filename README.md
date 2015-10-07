@@ -158,10 +158,13 @@ Faker.Name.Title() -> "Future Identity Inspector"
 <!--```swift-->
 <!--```-->
 
-<!--## Faker.University-->
-<!-------------------->
-<!--```swift-->
-<!--```-->
+## Faker.University
+-------------------
+```swift
+Faker.University.name() -> "Eastern Indiana Institute"
+Faker.University.prefix() -> "West"
+Faker.University.suffix() -> "University"
+```
 
 <!--## Installation-->
 

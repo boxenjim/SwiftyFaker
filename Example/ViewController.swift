@@ -147,6 +147,9 @@ class ViewController: UIViewController {
         
         // University
         print("***** University *****")
+        print("NAME: \(Faker.University.name())")
+        print("PREFIX: \(Faker.University.prefix())")
+        print("SUFFIX: \(Faker.University.suffix())")
         print("")
     }
 
