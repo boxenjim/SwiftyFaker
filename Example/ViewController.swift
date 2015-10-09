@@ -72,6 +72,12 @@ class ViewController: UIViewController {
         
         // Commerce
         print("***** Commerce *****")
+        print("COLOR: \(Faker.Commerce.color())")
+        print("DEPARTMENT: \(Faker.Commerce.department())")
+        print("PRODUCT_NAME: \(Faker.Commerce.productName())")
+        print("MATERIAL: \(Faker.Commerce.material())")
+        print("PRICE: \(Faker.Commerce.price())")
+        print("PRODUCT: \(Faker.Commerce.product())")
         print("")
         
         // Company

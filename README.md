@@ -75,10 +75,16 @@ Faker.Business.creditCardType() -> "discover"
 <!--```swift-->
 <!--```-->
 
-<!--## Faker.Commerce-->
-<!-------------------->
-<!--```swift-->
-<!--```-->
+## Faker.Commerce
+-----------------
+```swift
+Faker.Commerce.color() -> "maroon"
+Faker.Commerce.department() -> "Electronics & Garden"
+Faker.Commerce.productName() -> "Aerodynamic Iron Computer"
+Faker.Commerce.material() -> "Silk"
+Faker.Commerce.price() -> 3.72
+Faker.Commerce.product() -> Bag
+```
 
 ## Faker.Company
 ----------------
