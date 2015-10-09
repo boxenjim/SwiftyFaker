@@ -50,12 +50,4 @@ class CommerceTests: XCTestCase {
         let product = Faker.Commerce.product()
         XCTAssertFalse(product.isEmpty, "product should not be empty")
     }
-    
-//    print("COLOR: \(Faker.Commerce.color)")
-//    print("DEPARTMENT: \(Faker.Commerce.department())")
-//    print("PRODUCT_NAME: \(Faker.Commerce.productName())")
-//    print("MATERIAL: \(Faker.Commerce.material())")
-//    print("PRICE: \(Faker.Commerce.price())")
-//    print("PRODUCT: \(Faker.Commerce.product())")
-    
 }

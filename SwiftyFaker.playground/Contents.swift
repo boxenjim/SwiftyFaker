@@ -54,7 +54,3 @@ let arr2 = array[array.count-1..<array.count]
 let commaSep = arr1.joinWithSeparator(", ")
 let merged = commaSep + " & " + arr2.joinWithSeparator(" ")
 
-//let arr1 = array[0..<array.count-1]
-//let arr2 = array[array.count-1..<array.count]
-//let merge = arr1.joinWithSeparator(", ") + " , & " + arr2.joinWithSeparator("")
-//print(merge)
