@@ -43,3 +43,14 @@ func bothify(string: String) -> String {
 numerify("##########################")
 letterify("?#?###?")
 bothify("?#?###?")
+
+floor(Double.random(0, max: 100.0) * 100)/100.0
+
+let array = ["1"]
+
+let arr1 = array[0..<array.count-1]
+let arr2 = array[array.count-1..<array.count]
+
+let commaSep = arr1.joinWithSeparator(", ")
+let merged = commaSep + " & " + arr2.joinWithSeparator(" ")
+

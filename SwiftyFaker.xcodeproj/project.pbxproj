@@ -63,6 +63,7 @@
 		9B8A72741BB0D196005AAD34 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A72731BB0D196005AAD34 /* AddressTests.swift */; settings = {ASSET_TAGS = (); }; };
 		9B8A72781BB300FF005AAD34 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A72771BB300FF005AAD34 /* Random.swift */; settings = {ASSET_TAGS = (); }; };
 		9B8A727A1BB3045B005AAD34 /* RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8A72791BB3045B005AAD34 /* RandomTests.swift */; settings = {ASSET_TAGS = (); }; };
+		9B8E50261BC7669C00A29B16 /* CommerceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E50251BC7669C00A29B16 /* CommerceTests.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +136,7 @@
 		9B8A72731BB0D196005AAD34 /* AddressTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressTests.swift; sourceTree = "<group>"; };
 		9B8A72771BB300FF005AAD34 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		9B8A72791BB3045B005AAD34 /* RandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomTests.swift; sourceTree = "<group>"; };
+		9B8E50251BC7669C00A29B16 /* CommerceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 				9B4B0C501BC2227D004F1BE6 /* AppTests.swift */,
 				9B3764E41BC2DFF500EABF51 /* BookTests.swift */,
 				9B3764E71BC3481400EABF51 /* BusinessTests.swift */,
+				9B8E50251BC7669C00A29B16 /* CommerceTests.swift */,
 				9B4B0C521BC22CF0004F1BE6 /* CompanyTests.swift */,
 				9B8A720D1BB04EE6005AAD34 /* LoremTests.swift */,
 				9B454D691BAD110300C5D2CE /* NameTests.swift */,
@@ -422,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B3764E51BC2DFF500EABF51 /* BookTests.swift in Sources */,
+				9B8E50261BC7669C00A29B16 /* CommerceTests.swift in Sources */,
 				9B8A727A1BB3045B005AAD34 /* RandomTests.swift in Sources */,
 				9B454D6A1BAD110300C5D2CE /* NameTests.swift in Sources */,
 				9B8A720E1BB04EE6005AAD34 /* LoremTests.swift in Sources */,
