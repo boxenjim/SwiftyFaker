@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B2E0B201BC953600026FD7E /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2E0B1F1BC953600026FD7E /* Animal.swift */; settings = {ASSET_TAGS = (); }; };
+		9B2E0B221BC953BA0026FD7E /* animal.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B2E0B211BC953BA0026FD7E /* animal.json */; settings = {ASSET_TAGS = (); }; };
+		9B2E0B241BC954150026FD7E /* TeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2E0B231BC954150026FD7E /* TeamTests.swift */; settings = {ASSET_TAGS = (); }; };
 		9B342AC61BC5D93000B92F32 /* UniversityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B342AC51BC5D93000B92F32 /* UniversityTests.swift */; settings = {ASSET_TAGS = (); }; };
 		9B3764E51BC2DFF500EABF51 /* BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3764E41BC2DFF500EABF51 /* BookTests.swift */; settings = {ASSET_TAGS = (); }; };
 		9B3764E81BC3481400EABF51 /* BusinessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3764E71BC3481400EABF51 /* BusinessTests.swift */; settings = {ASSET_TAGS = (); }; };
@@ -77,6 +80,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B2E0B1F1BC953600026FD7E /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		9B2E0B211BC953BA0026FD7E /* animal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animal.json; sourceTree = "<group>"; };
+		9B2E0B231BC954150026FD7E /* TeamTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTests.swift; sourceTree = "<group>"; };
 		9B342AC51BC5D93000B92F32 /* UniversityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversityTests.swift; sourceTree = "<group>"; };
 		9B3764E41BC2DFF500EABF51 /* BookTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTests.swift; sourceTree = "<group>"; };
 		9B3764E71BC3481400EABF51 /* BusinessTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessTests.swift; sourceTree = "<group>"; };
@@ -202,6 +208,7 @@
 				9B8A720D1BB04EE6005AAD34 /* LoremTests.swift */,
 				9B454D691BAD110300C5D2CE /* NameTests.swift */,
 				9B8A72791BB3045B005AAD34 /* RandomTests.swift */,
+				9B2E0B231BC954150026FD7E /* TeamTests.swift */,
 				9B342AC51BC5D93000B92F32 /* UniversityTests.swift */,
 				9B454BE61BACDF6300C5D2CE /* Info.plist */,
 			);
@@ -212,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				9B454BF01BACDFC300C5D2CE /* Address.swift */,
+				9B2E0B1F1BC953600026FD7E /* Animal.swift */,
 				9B454BF11BACDFC300C5D2CE /* App.swift */,
 				9B454BF21BACDFC300C5D2CE /* Bitcoin.swift */,
 				9B454BF31BACDFC300C5D2CE /* Book.swift */,
@@ -240,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				9B454C071BACDFC300C5D2CE /* address.json */,
+				9B2E0B211BC953BA0026FD7E /* animal.json */,
 				9B454C081BACDFC300C5D2CE /* app.json */,
 				9B454C091BACDFC300C5D2CE /* bitcoin.json */,
 				9B454C0A1BACDFC300C5D2CE /* book.json */,
@@ -377,6 +386,7 @@
 				9B454C3A1BACDFC300C5D2CE /* company.json in Resources */,
 				9B454C331BACDFC300C5D2CE /* app.json in Resources */,
 				9B454C431BACDFC300C5D2CE /* slack_emoji.json in Resources */,
+				9B2E0B221BC953BA0026FD7E /* animal.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +421,7 @@
 				9B454C2F1BACDFC300C5D2CE /* Time.swift in Sources */,
 				9B454C231BACDFC300C5D2CE /* Commerce.swift in Sources */,
 				9B454C2A1BACDFC300C5D2CE /* Name.swift in Sources */,
+				9B2E0B201BC953600026FD7E /* Animal.swift in Sources */,
 				9B454C201BACDFC300C5D2CE /* Business.swift in Sources */,
 				9B454C211BACDFC300C5D2CE /* Code.swift in Sources */,
 				9B454C291BACDFC300C5D2CE /* Lorem.swift in Sources */,
@@ -428,6 +439,7 @@
 				9B8E50261BC7669C00A29B16 /* CommerceTests.swift in Sources */,
 				9B8A727A1BB3045B005AAD34 /* RandomTests.swift in Sources */,
 				9B454D6A1BAD110300C5D2CE /* NameTests.swift in Sources */,
+				9B2E0B241BC954150026FD7E /* TeamTests.swift in Sources */,
 				9B8A720E1BB04EE6005AAD34 /* LoremTests.swift in Sources */,
 				9B8A72741BB0D196005AAD34 /* AddressTests.swift in Sources */,
 				9B8A72111BB052B1005AAD34 /* FakerTests.swift in Sources */,
