@@ -145,6 +145,10 @@ class ViewController: UIViewController {
         
         // Team
         print("***** Team *****")
+        print("CREATURE: \(Faker.Team.creature())")
+        print("NAME: \(Faker.Team.name())")
+        print("SPORT: \(Faker.Team.sport())")
+        print("STATE: \(Faker.Team.state())")
         print("")
         
         // Time
