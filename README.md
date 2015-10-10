@@ -7,14 +7,12 @@
 A fake data generator written in Swift. Inspired by and Aspiring to be as amazing as the [Ruby](https://www.ruby-lang.org/en/) [gem](https://rubygems.org), [Faker](https://github.com/stympy/faker).
 
 ## Usage
---------
 ```swift
 Faker.Name.name() -> "Nellie Buckridge Jr."
 Faker.Lorem.sentence() -> "voluptas consequatur magnam harum."
 ```
 
 ## Faker.Address
-----------------
 ```swift
 Faker.Address.buildingNumber() -> "220"
 Faker.Address.city() -> "Lake Derrickport"
@@ -37,7 +35,6 @@ Faker.Address.zipCode() -> "82782"
 ```
 
 ## Faker.App
-------------
 ```swift
 Faker.App.name() -> "Alphazap"
 Faker.App.appVersion() -> "1.5.2"
@@ -50,7 +47,6 @@ Faker.App.author() -> "Otha Braun"
 <!--```-->
 
 ## Faker.Book
--------------
 ```swift
 Faker.Book.title() -> "The Zookeeper and Her Tiger"
 Faker.Book.author() -> "Janie Bashirian"
@@ -58,7 +54,6 @@ Faker.Book.publisher() -> "Parker Publishing"
 ```
 
 ## Faker.Business
------------------
 ```swift-->
 Faker.Business.creditCardNumber() -> "1234-2121-1221-1211"
 Faker.Business.creditCardExpiry() -> 2019-10-05 06:00:00 +0000
@@ -76,7 +71,6 @@ Faker.Business.creditCardType() -> "discover"
 <!--```-->
 
 ## Faker.Commerce
------------------
 ```swift
 Faker.Commerce.color() -> "maroon"
 Faker.Commerce.department() -> "Electronics & Garden"
@@ -87,7 +81,6 @@ Faker.Commerce.product() -> Bag
 ```
 
 ## Faker.Company
-----------------
 ```swift
 Faker.Company.name() -> "Labadie-Wisoky"
 Faker.Comany.suffix() -> "and Sons"
@@ -121,7 +114,6 @@ Faker.Company.swedishOrganisationNumber() -> "57189359064"
 <!--```-->
 
 ## Faker.Lorem
-----------------
 ```swift
 Faker.Lorem.word() -> "sed"
 Faker.Lorem.words() -> ["vel", "officia", "perferendis"]
@@ -129,7 +121,6 @@ Faker.Lorem.sentence() -> "dicta ipsum eveniet recusandae."
 ```
 
 ## Faker.Name
-----------------
 ```swift
 Faker.Name.name() -> "Mrs. Grant Wilkinson"
 Faker.Name.firstName() -> "Willy"
@@ -154,10 +145,13 @@ Faker.Name.Title() -> "Future Identity Inspector"
 <!--```swift-->
 <!--```-->
 
-<!--## Faker.Team-->
-<!-------------------->
-<!--```swift-->
-<!--```-->
+## Faker.Team
+```swift
+Faker.Team.creature() -> "chickens"
+Faker.Team.name() -> "Washington sheep"
+Faker.Team.sport() -> "wrestling"
+Faker.Team.state() -> "Utah"
+```
 
 <!--## Faker.Time-->
 <!-------------------->
@@ -165,7 +159,6 @@ Faker.Name.Title() -> "Future Identity Inspector"
 <!--```-->
 
 ## Faker.University
--------------------
 ```swift
 Faker.University.name() -> "Eastern Indiana Institute"
 Faker.University.prefix() -> "West"
