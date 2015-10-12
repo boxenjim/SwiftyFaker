@@ -59,7 +59,7 @@ extension Faker {
         
         private static let _address = Address(dictionary: Faker.JSON("address"))
         
-        // MARK: Private Address methods
+        // MARK: Private methods
         private func cities() -> [String] {
             return ["\(Address.cityPrefix()) \(Name.firstName())\(Address.citySuffix())",
                 "\(Address.cityPrefix()) \(Name.firstName())",
