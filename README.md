@@ -110,7 +110,7 @@ Faker.Hacker.abbreviation() -> "FTP"
 Faker.Hacker.adjective() -> "open-source"
 Faker.Hacker.noun() -> "driver"
 Faker.Hacker.verb() -> "parse"
-Faker.Hacker.ingverb() -> overriding
+Faker.Hacker.ingverb() -> "overriding"
 ```
 
 <!--## Faker.Internet-->
