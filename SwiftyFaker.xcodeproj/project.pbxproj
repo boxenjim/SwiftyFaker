@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9B2BDA7F1BCB5BBE00B3FFDE /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2BDA7E1BCB5BBE00B3FFDE /* Avatar.swift */; settings = {ASSET_TAGS = (); }; };
 		9B2BDA811BCBF73B00B3FFDE /* HackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2BDA801BCBF73B00B3FFDE /* HackerTests.swift */; settings = {ASSET_TAGS = (); }; };
+		9B2BDA831BCC000800B3FFDE /* SlackEmojiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2BDA821BCC000800B3FFDE /* SlackEmojiTests.swift */; settings = {ASSET_TAGS = (); }; };
 		9B2E0B201BC953600026FD7E /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2E0B1F1BC953600026FD7E /* Animal.swift */; settings = {ASSET_TAGS = (); }; };
 		9B2E0B221BC953BA0026FD7E /* animal.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B2E0B211BC953BA0026FD7E /* animal.json */; settings = {ASSET_TAGS = (); }; };
 		9B2E0B241BC954150026FD7E /* TeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2E0B231BC954150026FD7E /* TeamTests.swift */; settings = {ASSET_TAGS = (); }; };
@@ -84,6 +85,7 @@
 /* Begin PBXFileReference section */
 		9B2BDA7E1BCB5BBE00B3FFDE /* Avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 		9B2BDA801BCBF73B00B3FFDE /* HackerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerTests.swift; sourceTree = "<group>"; };
+		9B2BDA821BCC000800B3FFDE /* SlackEmojiTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackEmojiTests.swift; sourceTree = "<group>"; };
 		9B2E0B1F1BC953600026FD7E /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		9B2E0B211BC953BA0026FD7E /* animal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animal.json; sourceTree = "<group>"; };
 		9B2E0B231BC954150026FD7E /* TeamTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTests.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				9B8A720D1BB04EE6005AAD34 /* LoremTests.swift */,
 				9B454D691BAD110300C5D2CE /* NameTests.swift */,
 				9B8A72791BB3045B005AAD34 /* RandomTests.swift */,
+				9B2BDA821BCC000800B3FFDE /* SlackEmojiTests.swift */,
 				9B2E0B231BC954150026FD7E /* TeamTests.swift */,
 				9B342AC51BC5D93000B92F32 /* UniversityTests.swift */,
 				9B454BE61BACDF6300C5D2CE /* Info.plist */,
@@ -447,6 +450,7 @@
 				9B8E50261BC7669C00A29B16 /* CommerceTests.swift in Sources */,
 				9B8A727A1BB3045B005AAD34 /* RandomTests.swift in Sources */,
 				9B454D6A1BAD110300C5D2CE /* NameTests.swift in Sources */,
+				9B2BDA831BCC000800B3FFDE /* SlackEmojiTests.swift in Sources */,
 				9B2E0B241BC954150026FD7E /* TeamTests.swift in Sources */,
 				9B8A720E1BB04EE6005AAD34 /* LoremTests.swift in Sources */,
 				9B8A72741BB0D196005AAD34 /* AddressTests.swift in Sources */,
