@@ -54,7 +54,7 @@ Faker.Book.publisher() -> "Parker Publishing"
 ```
 
 ## Faker.Business
-```swift-->
+```swift
 Faker.Business.creditCardNumber() -> "1234-2121-1221-1211"
 Faker.Business.creditCardExpiry() -> 2019-10-05 06:00:00 +0000
 Faker.Business.creditCardType() -> "discover"
