@@ -103,6 +103,12 @@ class ViewController: UIViewController {
         
         // Hacker
         print("***** Hacker *****")
+        print("SAY_SOMETHING_SMART: \(Faker.Hacker.saySomethingSmart())")
+        print("ABBREVIATION: \(Faker.Hacker.abbreviation())")
+        print("ADJECTIVE: \(Faker.Hacker.adjective())")
+        print("NOUN: \(Faker.Hacker.noun())")
+        print("VERB: \(Faker.Hacker.verb())")
+        print("INGVERB: \(Faker.Hacker.ingverb())")
         print("")
         
         // Internet

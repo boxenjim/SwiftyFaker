@@ -103,10 +103,15 @@ Faker.Company.swedishOrganisationNumber() -> "57189359064"
 <!--```swift-->
 <!--```-->
 
-<!--## Faker.Hacker-->
-<!-------------------->
-<!--```swift-->
-<!--```-->
+## Faker.Hacker
+```swift
+Faker.Hacker.saySomethingSmart() -> "We need to input the redundant IB microchip!"
+Faker.Hacker.abbreviation() -> "FTP"
+Faker.Hacker.adjective() -> "open-source"
+Faker.Hacker.noun() -> "driver"
+Faker.Hacker.verb() -> "parse"
+Faker.Hacker.ingverb() -> overriding
+```
 
 <!--## Faker.Internet-->
 <!-------------------->
