@@ -60,4 +60,9 @@ class SlackEmojiTests: XCTestCase {
         let custom = Faker.SlackEmoji.custom()
         XCTAssertFalse(custom.isEmpty, "custom should not be empty")
     }
+    
+    func testEmoji() {
+        let emoji = Faker.SlackEmoji.emoji()
+        XCTAssertFalse(emoji.isEmpty, "emoji should not be empty")
+    }
 }
