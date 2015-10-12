@@ -147,6 +147,15 @@ class ViewController: UIViewController {
         
         // SlackEmoji
         print("***** SlackEmoji *****")
+        print("PEOPLE: \(Faker.SlackEmoji.people())")
+        print("NATURE: \(Faker.SlackEmoji.nature())")
+        print("FOOD_AND_DRINK: \(Faker.SlackEmoji.foodAndDrink())")
+        print("CELEBRATION: \(Faker.SlackEmoji.celebration())")
+        print("ACTIVITY: \(Faker.SlackEmoji.activity())")
+        print("TRAVEL_AND_PLACES: \(Faker.SlackEmoji.travelAndPlaces())")
+        print("OBJECTS_AND_SYMBOLS: \(Faker.SlackEmoji.objectsAndSymbols())")
+        print("CUSTOM: \(Faker.SlackEmoji.custom())")
+        print("EMOJI: \(Faker.SlackEmoji.emoji())")
         print("")
         
         // Team

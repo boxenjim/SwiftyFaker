@@ -145,10 +145,18 @@ Faker.Name.Title() -> "Future Identity Inspector"
 <!--```swift-->
 <!--```-->
 
-<!--## Faker.SlackEmoji-->
-<!-------------------->
-<!--```swift-->
-<!--```-->
+## Faker.SlackEmoji
+```swift
+Faker.SlackEmoji.people() -> ":kissing:"
+Faker.SlackEmoji.nature() -> ":rabbit2:"
+Faker.SlackEmoji.foodAndDrink() -> ":pineapple:"
+Faker.SlackEmoji.celebration() -> ":broken_heart:"
+Faker.SlackEmoji.activity() -> ":rowboat:"
+Faker.SlackEmoji.travelAndPlaces() -> ":articulated_lorry:"
+Faker.SlackEmoji.objectsAndSymbols() -> ":wrench:"
+Faker.SlackEmoji.custom() -> ":simple_smile:"
+Faker.SlackEmoji.emoji() -> ":suspect:"
+```
 
 ## Faker.Team
 ```swift
