@@ -52,7 +52,7 @@ class PhoneNumberTests: XCTestCase {
     }
     
     func testExtensionNumberLengthMatch() {
-        let length = Int.random(0...9)
+        let length = Int.random(1...9)
         let number = Faker.PhoneNumber.extensionNumber(length)
         XCTAssertEqual(length, number.characters.count, "extensionNumber char count should match length \(length)")
     }
