@@ -46,12 +46,6 @@ class PhoneNumberTests: XCTestCase {
         XCTAssertFalse(number.isEmpty, "subscriberNumber should not be empty")
     }
     
-    func testSubscriberNumberLengthMatch() {
-        let length = Int.random(0...9)
-        let number = Faker.PhoneNumber.subscriberNumber(length)
-        XCTAssertEqual(length, number.characters.count, "subscriberNumber char count should match length \(length)")
-    }
-    
     func testExtensionNumber() {
         let number = Faker.PhoneNumber.extensionNumber()
         XCTAssertFalse(number.isEmpty, "extensionNumber should not be empty")

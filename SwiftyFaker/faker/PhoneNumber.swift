@@ -72,12 +72,12 @@ extension Faker {
             return codes.random()
         }
         
-        public static func subscriberNumber(length: Int = 4) -> String {
-            return numerify(numerifyable(length))
+        public static func subscriberNumber() -> String {
+            return extensionNumber(4)
         }
         
         public static func extensionNumber(length: Int = 3) -> String {
-            return subscriberNumber(length)
+            return numerify(numerifyable(length))
         }
     }
 }
