@@ -54,3 +54,20 @@ let arr2 = array[array.count-1..<array.count]
 let commaSep = arr1.joinWithSeparator(", ")
 let merged = commaSep + " & " + arr2.joinWithSeparator(" ")
 
+func numerifable(length: Int = 4) -> String {
+    var string = ""
+    for _ in 0..<length {
+        string += "#"
+    }
+    return string
+}
+
+func letterifable(length: Int = 4) -> String {
+    var string = ""
+    for _ in 0..<length {
+        string += "?"
+    }
+    return string
+}
+
+let numString = numerify(numerifable(5))

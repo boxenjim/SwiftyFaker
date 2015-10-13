@@ -140,10 +140,15 @@ Faker.Name.Title() -> "Future Identity Inspector"
 <!--```swift-->
 <!--```-->
 
-<!--## Faker.PhoneNumber-->
-<!-------------------->
-<!--```swift-->
-<!--```-->
+## Faker.PhoneNumber
+```swift
+Faker.PhoneNumber.phoneNumber() -> "761.578.8105 x3252"
+Faker.PhoneNumber.cellPhone() -> "1-699-120-3643"
+Faker.PhoneNumber.areaCode() -> "551"
+Faker.PhoneNumber.exchangeCode() -> "318"
+Faker.PhoneNumber.subscriberNumber() -> "2316"
+Faker.PhoneNumber.extensionNumber() -> "697"
+```
 
 ## Faker.SlackEmoji
 ```swift

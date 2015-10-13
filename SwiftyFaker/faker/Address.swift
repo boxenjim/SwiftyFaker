@@ -17,7 +17,7 @@ extension Faker {
         private var country_codes: [String]?
         private var default_countries: [String]?
         private var postcodes: [String]?
-        private var postcodes_by_state: [String]?
+        private var postcodes_by_state: [String : String]?
         private var secondary_addresses: [String]?
         private var states: [String]?
         private var states_abbr: [String]?
@@ -41,7 +41,7 @@ extension Faker {
             } else if key == "postcode" {
                 postcodes = value as? [String]
             } else if key == "postcode_by_state" {
-                postcodes_by_state = value as? [String]
+                postcodes_by_state = value as? [String : String]
             } else if key == "secondary_address" {
                 secondary_addresses = value as? [String]
             } else if key == "state" {
@@ -162,14 +162,15 @@ extension Faker {
             provide a zip code that is valid for the state provided
             see http://www.fincen.gov/forms/files/us_state_territory_zip_codes.pdf
         */
-        public static func zipCode(stateAbbreviation: String = "") -> String {
-            if stateAbbreviation == "" {
+        public static func zipCode(stateAbbreviation: String? = nil) -> String {
+            if stateAbbreviation == nil {
                 guard let postCode = _address.postcodes?.random() else { return "" }
-                return bothify(postCode)
+                return numerify(postCode)
             }
             
-            guard let postCode = _address.postcodes_by_state?.random() else { return "" }
-            return bothify(postCode + stateAbbreviation)
+            guard let postCodes = _address.postcodes_by_state else { return "" }
+            guard let postCode = postCodes[stateAbbreviation!.uppercaseString] else { return "" }
+            return numerify(postCode)
         }
     }
 }
