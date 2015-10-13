@@ -55,13 +55,11 @@ extension Faker {
         
         // MARK: Methods
         public static func phoneNumber() -> String {
-            let formats = _phoneNumber.phoneFormats()
-            return numerify(formats.random())
+            return numerify(_phoneNumber.phoneFormats().random())
         }
         
         public static func cellPhone() -> String {
-            let formats = _phoneNumber.cellFormats()
-            return numerify(formats.random())
+            return numerify(_phoneNumber.cellFormats().random())
         }
         
         public static func areaCode() -> String {
