@@ -10,26 +10,12 @@ import Foundation
 
 extension Faker {
     public class PhoneNumber: Faker {
-        private var phone_number: [String : AnyObject]?
-        private var cell_phone: [String : AnyObject]?
         private var areaCodes: [String]?
         private var exchangeCodes: [String]?
         
-        private var phone_formats: [String]? {
-            return phone_number?["formats"] as? [String]
-        }
-        
-        private var cell_formats: [String]? {
-            return cell_phone?["formats"] as? [String]
-        }
-        
         // MARK: NSKeyValueCoding
         public override func setValue(value: AnyObject?, forKey key: String) {
-            if key == "phone_number" {
-                phone_number = value as? [String : AnyObject]
-            } else if key == "cell_phone" {
-                cell_phone = value as? [String : AnyObject]
-            } else if key == "area_code" {
+            if key == "area_code" {
                 areaCodes = value as? [String]
             } else if key == "exchange_code" {
                 exchangeCodes = value as? [String]
@@ -41,7 +27,22 @@ extension Faker {
         private static let _phoneNumber = PhoneNumber(dictionary: Faker.JSON("phone_number"))
         
         // MARK: Private Methods
-        func formats() -> [String] {
+        private func phoneFormats() -> [String] {
+            return cellFormats() + ["\(PhoneNumber.areaCode())-\(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
+            "(\(PhoneNumber.areaCode())) \(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
+            "1-\(PhoneNumber.areaCode())-\(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
+            "\(PhoneNumber.areaCode()).\(PhoneNumber.exchangeCode()).\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
+            "\(PhoneNumber.areaCode())-\(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
+            "(\(PhoneNumber.areaCode())) \(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
+            "1-\(PhoneNumber.areaCode())-\(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
+            "\(PhoneNumber.areaCode()).\(PhoneNumber.exchangeCode()).\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
+            "\(PhoneNumber.areaCode())-\(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
+            "(\(PhoneNumber.areaCode())) \(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
+            "1-\(PhoneNumber.areaCode())-\(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
+            "\(PhoneNumber.areaCode()).\(PhoneNumber.exchangeCode()).\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())"]
+        }
+        
+        private func cellFormats() -> [String] {
             return ["\(PhoneNumber.areaCode())-\(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber())",
                 "(\(PhoneNumber.areaCode())) \(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber())",
                 "1-\(PhoneNumber.areaCode())-\(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber())",
@@ -49,29 +50,17 @@ extension Faker {
                 "\(PhoneNumber.areaCode())-\(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber())",
                 "(\(PhoneNumber.areaCode())) \(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber())",
                 "1-\(PhoneNumber.areaCode())-\(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber())",
-                "\(PhoneNumber.areaCode()).\(PhoneNumber.exchangeCode()).\(PhoneNumber.subscriberNumber())",
-                "\(PhoneNumber.areaCode())-\(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
-                "(\(PhoneNumber.areaCode())) \(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
-                "1-\(PhoneNumber.areaCode())-\(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
-                "\(PhoneNumber.areaCode()).\(PhoneNumber.exchangeCode()).\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
-                "\(PhoneNumber.areaCode())-\(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
-                "(\(PhoneNumber.areaCode())) \(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
-                "1-\(PhoneNumber.areaCode())-\(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
-                "\(PhoneNumber.areaCode()).\(PhoneNumber.exchangeCode()).\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
-                "\(PhoneNumber.areaCode())-\(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
-                "(\(PhoneNumber.areaCode())) \(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
-                "1-\(PhoneNumber.areaCode())-\(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
-                "\(PhoneNumber.areaCode()).\(PhoneNumber.exchangeCode()).\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())"]
+                "\(PhoneNumber.areaCode()).\(PhoneNumber.exchangeCode()).\(PhoneNumber.subscriberNumber())"]
         }
         
         // MARK: Methods
         public static func phoneNumber() -> String {
-            guard let formats = _phoneNumber.phone_formats else { return "" }
+            let formats = _phoneNumber.phoneFormats()
             return numerify(formats.random())
         }
         
         public static func cellPhone() -> String {
-            guard let formats = _phoneNumber.cell_formats else { return "" }
+            let formats = _phoneNumber.cellFormats()
             return numerify(formats.random())
         }
         
