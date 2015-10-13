@@ -228,4 +228,4 @@ Open the Xcode project and press `⌘-U` to run the tests.
 
 Feel free to get in touch.
 * Gitter: [![Join the chat at https://gitter.im/boxenjim/SwiftyFaker](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/boxenjim/SwiftyFaker?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-* Twitter: [@boxenjim](http://twitter.com/boxenjim)
+* Twitter: [![Twitter](https://img.shields.io/badge/twitter-@boxenjim-blue.svg?style=flat)](http://twitter.com/boxenjim)
