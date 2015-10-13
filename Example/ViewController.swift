@@ -143,6 +143,12 @@ class ViewController: UIViewController {
         
         // PhoneNumber
         print("***** PhoneNumber *****")
+        print("PHONE_NUMBER: \(Faker.PhoneNumber.phoneNumber())")
+        print("CELL_PHONE: \(Faker.PhoneNumber.cellPhone())")
+        print("AREA_CODE: \(Faker.PhoneNumber.areaCode())")
+        print("EXCHANGE_CODE: \(Faker.PhoneNumber.exchangeCode())")
+        print("SUBSCRIBER_NUMBER: \(Faker.PhoneNumber.subscriberNumber())")
+        print("EXTENSION_NUMBER: \(Faker.PhoneNumber.extensionNumber())")
         print("")
         
         // SlackEmoji

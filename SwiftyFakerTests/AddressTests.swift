@@ -111,4 +111,9 @@ class AddressTests: XCTestCase {
         let zip = Faker.Address.zipCode()
         XCTAssertFalse(zip.isEmpty, "zipCode shouldn't be empty")
     }
+    
+    func testZipCodeStateAbbr() {
+        let zip = Faker.Address.zipCode(Faker.Address.stateAbbr())
+        XCTAssertFalse(zip.isEmpty, "zipCode shouldn't be empty")
+    }
 }

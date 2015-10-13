@@ -12,6 +12,22 @@ public class Faker: NSObject {
     internal static let ULetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     internal static let Letters = Faker.ULetters + ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     
+    private static func ifyable(length: Int, typeString: String) -> String {
+        var string = ""
+        for _ in 0..<length {
+            string += typeString
+        }
+        return string
+    }
+    
+    static func numerifyable(length: Int) -> String {
+        return ifyable(length, typeString: "#")
+    }
+    
+    static func letterifyable(length: Int) -> String {
+        return ifyable(length, typeString: "?")
+    }
+    
     static func numerify(numberString: String, intConvertable: Bool = true) -> String {
         let range = numberString.characters.startIndex...numberString.characters.startIndex
         var numberString = numberString
