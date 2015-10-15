@@ -35,18 +35,20 @@ class NumberTests: XCTestCase {
     func testDecimal() {
         let digits = Int.random(1...10)
         let number = Faker.Number.decimal(digits)
-        let comps = "\(number)".componentsSeparatedByString(".")
-        XCTAssertEqual(comps.first?.characters.count, digits, "digits count should match \(digits)")
-        XCTAssertEqual(comps.last?.characters.count, 2, "digit after decimal count should match 2")
+        XCTAssertEqual("\(number)".characters.count, digits + 2 + 1)
+//        let comps = "\(number)".componentsSeparatedByString(".")
+//        XCTAssertEqual(comps.first?.characters.count, digits, "digits count should match \(digits)")
+//        XCTAssertEqual(comps.last?.characters.count, 2, "digit after decimal count should match 2")
     }
     
     func testDecimalWithAfterDigits() {
         let digits = Int.random(1...10)
         let afterDigits = Int.random(1...(15-digits))
         let number = Faker.Number.decimal(digits, digitsAfter: afterDigits)
-        let comps = "\(number)".componentsSeparatedByString(".")
-        XCTAssertEqual(comps.first?.characters.count, digits, "digits count should match \(digits)")
-        XCTAssertEqual(comps.last?.characters.count, afterDigits, "digit after decimal count should match \(afterDigits)")
+        XCTAssertEqual("\(number)".characters.count, digits + afterDigits + 1)
+//        let comps = "\(number)".componentsSeparatedByString(".")
+//        XCTAssertEqual(comps.first?.characters.count, digits, "digits count should match \(digits)")
+//        XCTAssertEqual(comps.last?.characters.count, afterDigits, "digit after decimal count should match \(afterDigits)")
     }
     
     func testHexadecimal() {
