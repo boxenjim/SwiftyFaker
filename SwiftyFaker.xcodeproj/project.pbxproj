@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9B14467E1BCC9E94000337B5 /* PhoneNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B14467D1BCC9E94000337B5 /* PhoneNumberTests.swift */; settings = {ASSET_TAGS = (); }; };
+		9B29F7501BCF2C8600961A08 /* NumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B29F74F1BCF2C8600961A08 /* NumberTests.swift */; settings = {ASSET_TAGS = (); }; };
 		9B2BDA7F1BCB5BBE00B3FFDE /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2BDA7E1BCB5BBE00B3FFDE /* Avatar.swift */; settings = {ASSET_TAGS = (); }; };
 		9B2BDA811BCBF73B00B3FFDE /* HackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2BDA801BCBF73B00B3FFDE /* HackerTests.swift */; settings = {ASSET_TAGS = (); }; };
 		9B2BDA831BCC000800B3FFDE /* SlackEmojiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2BDA821BCC000800B3FFDE /* SlackEmojiTests.swift */; settings = {ASSET_TAGS = (); }; };
@@ -85,6 +86,7 @@
 
 /* Begin PBXFileReference section */
 		9B14467D1BCC9E94000337B5 /* PhoneNumberTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberTests.swift; sourceTree = "<group>"; };
+		9B29F74F1BCF2C8600961A08 /* NumberTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberTests.swift; sourceTree = "<group>"; };
 		9B2BDA7E1BCB5BBE00B3FFDE /* Avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 		9B2BDA801BCBF73B00B3FFDE /* HackerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerTests.swift; sourceTree = "<group>"; };
 		9B2BDA821BCC000800B3FFDE /* SlackEmojiTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackEmojiTests.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				9B2BDA801BCBF73B00B3FFDE /* HackerTests.swift */,
 				9B8A720D1BB04EE6005AAD34 /* LoremTests.swift */,
 				9B454D691BAD110300C5D2CE /* NameTests.swift */,
+				9B29F74F1BCF2C8600961A08 /* NumberTests.swift */,
 				9B14467D1BCC9E94000337B5 /* PhoneNumberTests.swift */,
 				9B8A72791BB3045B005AAD34 /* RandomTests.swift */,
 				9B2BDA821BCC000800B3FFDE /* SlackEmojiTests.swift */,
@@ -456,6 +459,7 @@
 				9B2BDA831BCC000800B3FFDE /* SlackEmojiTests.swift in Sources */,
 				9B2E0B241BC954150026FD7E /* TeamTests.swift in Sources */,
 				9B8A720E1BB04EE6005AAD34 /* LoremTests.swift in Sources */,
+				9B29F7501BCF2C8600961A08 /* NumberTests.swift in Sources */,
 				9B8A72741BB0D196005AAD34 /* AddressTests.swift in Sources */,
 				9B8A72111BB052B1005AAD34 /* FakerTests.swift in Sources */,
 				9B4B0C531BC22CF0004F1BE6 /* CompanyTests.swift in Sources */,

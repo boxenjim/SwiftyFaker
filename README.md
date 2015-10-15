@@ -135,10 +135,19 @@ Faker.Name.suffix() -> "II"
 Faker.Name.Title() -> "Future Identity Inspector"
 ```
 
-<!--## Faker.Number-->
-<!-------------------->
-<!--```swift-->
-<!--```-->
+## Faker.Number
+```swift
+Faker.Number.number() -> 74038
+Faker.Number.number(6) -> 413010
+Faker.Number.decimal(5) -> 50054.36
+Faker.Number.decimal(3, digitsAfter: 5) -> 495.58939
+Faker.Number.hexadecimal(4) ->
+Faker.Number.between(0...1000) -> 193
+Faker.Number.between(0.0, max: 1000.00) -> 970.784187725463
+Faker.Number.positive() -> 996.451204905439
+Faker.Number.negative() -> -1996.75554450195
+Faker.Number.digit() -> 4
+```
 
 ## Faker.PhoneNumber
 ```swift

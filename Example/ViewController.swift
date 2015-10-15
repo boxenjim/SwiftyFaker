@@ -139,6 +139,16 @@ class ViewController: UIViewController {
         
         // Number
         print("***** Number *****")
+        print("NUMBER: \(Faker.Number.number())")
+        print("NUMBER(digits): \(Faker.Number.number(6))")
+        print("DECIMAL: \(Faker.Number.decimal(5))")
+        print("DECIMAL(digitsAfter): \(Faker.Number.decimal(3, digitsAfter: 5))")
+        print("HEXADECIMAL: \(Faker.Number.hexadecimal(4))")
+        print("BETWEEN(Int): \(Faker.Number.between(0...1000))")
+        print("BETWEEN(Double): \(Faker.Number.between(0.0, max: 1000.00))")
+        print("POSITIVE: \(Faker.Number.positive())")
+        print("NEGATIVE: \(Faker.Number.negative())")
+        print("DIGIT: \(Faker.Number.digit())")
         print("")
         
         // PhoneNumber
