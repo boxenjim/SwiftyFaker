@@ -202,6 +202,8 @@ Add the following line to your [Cartfile](https://github.com/Carthage/Carthage/b
 github "boxenjim/SwiftyFaker"
 ```
 
+*Note: to use SwiftyFaker with unit/ui tests be sure to read and follow, [Adding frameworks to unit tests or a framework](https://github.com/Carthage/Carthage#adding-frameworks-to-unit-tests-or-a-framework) of the [Carthage](https://github.com/Carthage/Carthage) documentation*
+
 <!--#### Cocoapods-->
 
 <!--Add the following line to your Podfile.-->
