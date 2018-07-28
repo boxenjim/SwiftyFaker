@@ -48,7 +48,7 @@ extension Faker {
         }
         
         open static func department(_ max: Int = 3, fixedAmount: Bool = false) -> String {
-            let num = fixedAmount ? max : 1 + Int.random(0...max)
+            let num = fixedAmount ? max : 1 + Int.random(0..<max+1)
             let cats = categories(num)
             return mergeCategories(cats)
         }

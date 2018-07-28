@@ -81,7 +81,7 @@ extension Faker {
         }
         
         open static func logo() -> String {
-            let rand = Int.random(1...13)
+            let rand = Int.random(1..<14)
             return "http://pigment.github.io/fake-logos/logos/medium/color/\(rand).png"
         }
         

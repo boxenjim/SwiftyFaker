@@ -144,7 +144,7 @@ class ViewController: UIViewController {
         print("DECIMAL: \(Faker.Number.decimal(5))")
         print("DECIMAL(digitsAfter): \(Faker.Number.decimal(3, digitsAfter: 5))")
         print("HEXADECIMAL: \(Faker.Number.hexadecimal(4))")
-        print("BETWEEN(Int): \(Faker.Number.between(0...1000))")
+        print("BETWEEN(Int): \(Faker.Number.between(0..<1001))")
         print("BETWEEN(Double): \(Faker.Number.between(0.0, max: 1000.00))")
         print("POSITIVE: \(Faker.Number.positive())")
         print("NEGATIVE: \(Faker.Number.negative())")

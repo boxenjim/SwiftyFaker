@@ -34,7 +34,7 @@ extension Faker {
         
         open static func creditCardExpiry() -> Foundation.Date {
             let normalizedNow = Calendar.current.startOfDay(for: Foundation.Date())
-            guard let expiry = (Calendar.current as NSCalendar).date(byAdding: NSCalendar.Unit.year, value: Int.random(1...4), to: normalizedNow, options: NSCalendar.Options()) else { return Foundation.Date() }
+            guard let expiry = (Calendar.current as NSCalendar).date(byAdding: NSCalendar.Unit.year, value: Int.random(1..<5), to: normalizedNow, options: NSCalendar.Options()) else { return Foundation.Date() }
             return expiry
         }
         

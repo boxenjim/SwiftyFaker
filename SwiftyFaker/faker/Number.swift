@@ -44,7 +44,7 @@ extension Faker {
         }
         
         open static func digit() -> Int {
-            return between(0...9)
+            return between(0..<10)
         }
     }
 }

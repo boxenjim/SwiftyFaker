@@ -1,6 +1,6 @@
 //
 //  Faker.swift
-//  Gran Causa
+//  SwiftyFaker
 //
 //  Created by Jim Schultz on 9/16/15.
 //  Copyright (c) 2015 Jim Schultz. All rights reserved.
@@ -32,18 +32,18 @@ open class Faker: NSObject {
     }
     
     static func numerify(_ numberString: String, intConvertable: Bool = true) -> String {
-        let range = numberString.characters.startIndex...numberString.characters.startIndex
+        let range = numberString.characters.startIndex..<numberString.characters.startIndex
         var numberString = numberString
         
         if intConvertable && numberString.characters.first == "#" {
-            numberString = numberString.replacingCharacters(in: range, with: "\(Int.random(1...9))")
+            numberString = numberString.replacingCharacters(in: range, with: "\(Int.random(1..<10))")
         }
         
         var numerifiedString = ""
         
         for character in numberString.characters {
             if character == "#" {
-                numerifiedString += "\(Int.random(0...9))"
+                numerifiedString += "\(Int.random(0..<10))"
             } else {
                 numerifiedString.append(character)
             }
@@ -81,7 +81,7 @@ open class Faker: NSObject {
     
     // MARK: NSKeyValueCoding
     open override func setValue(_ value: Any?, forUndefinedKey key: String) {
-        print("KEY: \(key) VALUE: \(value)")
+        print("KEY: \(key) VALUE: \(String(describing: value))")
     }
     
     // MARK: helpers

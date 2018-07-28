@@ -21,7 +21,7 @@ extension UInt64 {
     static func random(_ lower: UInt64 = min, upper: UInt64 = max) -> UInt64 {
         var m: UInt64
         let u = upper - lower
-        var r = arc4random(UInt64)
+        var r = arc4random(UInt64.self)
         
         if u > UInt64(Int64.max) {
             m = 1 + ~u
@@ -30,7 +30,7 @@ extension UInt64 {
         }
         
         while r < m {
-            r = arc4random(UInt64)
+            r = arc4random(UInt64.self)
         }
         
         return (r % u) + lower
@@ -39,7 +39,7 @@ extension UInt64 {
 
 extension Int64 {
     static func random(_ lower: Int64 = min, upper: Int64 = max) -> Int64 {
-        let (s, overflow) = Int64.subtractWithOverflow(upper, lower)
+        let (s, overflow) = upper.subtractingReportingOverflow(lower)
         let u = overflow ? UInt64.max - UInt64(~s) : UInt64(s)
         let r = UInt64.random(upper: u)
         
@@ -126,20 +126,20 @@ public extension Int {
 
 public extension Double {
     public static func random(_ min: Double = 0.0, max: Double = 1.0) -> Double {
-        let offset = min < 0.0 ? abs(min) : 0.0
+        let offset = min < 0.0 ? Swift.abs(min) : 0.0
         let low = min + offset
         let high = max + offset
-        let r = Double(arc4random(UInt64)) / Double(UInt64.max)
+        let r = Double(arc4random(UInt64.self)) / Double(UInt64.max)
         return ((r * (high - low)) + low) - offset
     }
 }
 
 public extension Float {
     public static func random(_ min: Float = 0.0, max: Float = 1.0) -> Float {
-        let offset = min < 0.0 ? abs(min) : Float(0.0)
+        let offset = min < 0.0 ? Swift.abs(min) : Float(0.0)
         let low = min + offset
         let high = max + offset
-        let r = Float(arc4random(UInt32)) / Float(UInt32.max)
+        let r = Float(arc4random(UInt32.self)) / Float(UInt32.max)
         return ((r * (high - low)) + low) - offset
     }
 }
