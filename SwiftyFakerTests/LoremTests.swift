@@ -39,14 +39,14 @@ class LoremTests: XCTestCase {
     
     func testSentence() {
         let sentence = Faker.Lorem.sentence()
-        let array = sentence.componentsSeparatedByString(" ")
+        let array = sentence.components(separatedBy: " ")
         XCTAssertEqual(array.count, 4, "sentence default should have 4 words")
     }
     
     func testSentenceWithCustomCount() {
         let count = Int.random(1...50)
         let sentence = Faker.Lorem.sentence(count)
-        let array = sentence.componentsSeparatedByString(" ")
+        let array = sentence.components(separatedBy: " ")
         XCTAssertEqual(array.count, count, "sentence word count should match, expected \(count), but got \(array.count)")
     }
 }

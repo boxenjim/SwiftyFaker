@@ -9,12 +9,12 @@
 import Foundation
 
 extension Faker {
-    public class University: Faker {
-        private var prefixes: [String]?
-        private var suffixes: [String]?
+    open class University: Faker {
+        fileprivate var prefixes: [String]?
+        fileprivate var suffixes: [String]?
         
         // MARK: NSKeyValueCoding
-        public override func setValue(value: AnyObject?, forKey key: String) {
+        open override func setValue(_ value: Any?, forKey key: String) {
             if key == "prefix" {
                 prefixes = value as? [String]
             } else if key == "suffix" {
@@ -24,10 +24,10 @@ extension Faker {
             }
         }
         
-        private static let _university = University(dictionary: Faker.JSON("university"))
+        fileprivate static let _university = University(dictionary: Faker.JSON("university"))
         
         // MARK: Private Name methods
-        private func names() -> [String] {
+        fileprivate func names() -> [String] {
             return ["\(Name.lastName()) \(University.suffix())",
                 "\(University.prefix()) \(Name.lastName()) \(University.suffix())",
                 "\(University.prefix()) \(Name.lastName())",
@@ -35,16 +35,16 @@ extension Faker {
         }
         
         // MARK: Methods
-        public static func name() -> String {
+        open static func name() -> String {
             return _university.names().random()
         }
         
-        public static func prefix() -> String {
+        open static func prefix() -> String {
             guard let prefixes = _university.prefixes else { return "" }
             return prefixes.random()
         }
         
-        public static func suffix() -> String {
+        open static func suffix() -> String {
             guard let suffixes = _university.suffixes else { return "" }
             return suffixes.random()
         }

@@ -9,12 +9,12 @@
 import Foundation
 
 extension Faker {
-    public class Lorem: Faker {
-        private var wrds: [String]?
-        private var supplementals: [String]?
+    open class Lorem: Faker {
+        fileprivate var wrds: [String]?
+        fileprivate var supplementals: [String]?
         
         // MARK: NSKeyValueCoding
-        public override func setValue(value: AnyObject?, forKey key: String) {
+        open override func setValue(_ value: Any?, forKey key: String) {
             if key == "word" {
                 wrds = value as? [String]
             } else if key == "supplemental" {
@@ -24,24 +24,24 @@ extension Faker {
             }
         }
         
-        private static let _lorem = Lorem(dictionary: Faker.JSON("lorem"))
+        fileprivate static let _lorem = Lorem(dictionary: Faker.JSON("lorem"))
         
         // MARK: Public Lorem methods
-        public static func character() -> String {
+        open static func character() -> String {
             return characters(1)
         }
         
-        public static func characters(charCount: Int = 255) -> String {
+        open static func characters(_ charCount: Int = 255) -> String {
             return ""
         }
         
-        public static func word() -> String {
+        open static func word() -> String {
             let wrds = words(1) as [String]
             let word = wrds.last!
             return word
         }
         
-        public static func words(count: Int = 3, supplemental: Bool = false) -> [String] {
+        open static func words(_ count: Int = 3, supplemental: Bool = false) -> [String] {
             guard let wordsArray = _lorem.wrds else { return [String]() }
             guard let supplementals = _lorem.supplementals else { return [String]() }
             
@@ -55,21 +55,21 @@ extension Faker {
             return array
         }
         
-        public static func sentence(wordCount: Int = 4, supplimental: Bool = false, randomWordsToAdd: Int = 6) -> String {
+        open static func sentence(_ wordCount: Int = 4, supplimental: Bool = false, randomWordsToAdd: Int = 6) -> String {
             let array = words(wordCount, supplemental: supplimental)
-            let sentence = array.joinWithSeparator(" ")
+            let sentence = array.joined(separator: " ")
             return sentence + "."
         }
         
-        public static func sentences(sentenceCount: Int = 3, supplemental: Bool = false) -> String  {
+        open static func sentences(_ sentenceCount: Int = 3, supplemental: Bool = false) -> String  {
             return ""
         }
         
-        public static func paragraph(sentenceCount: Int = 3, supplemental: Bool = false, randomSentencesToAdd: Int = 3) -> String  {
+        open static func paragraph(_ sentenceCount: Int = 3, supplemental: Bool = false, randomSentencesToAdd: Int = 3) -> String  {
             return ""
         }
         
-        public static func paragraphs(paragraphCount: Int = 3, supplemental: Bool = false) -> String {
+        open static func paragraphs(_ paragraphCount: Int = 3, supplemental: Bool = false) -> String {
             return ""
         }
     }

@@ -9,13 +9,13 @@
 import Foundation
 
 extension Faker {
-    public class Company: Faker {
-        private var suffixes: [String]?
-        private var buzzwords: [[String]]?
-        private var bsWords: [[String]]?
+    open class Company: Faker {
+        fileprivate var suffixes: [String]?
+        fileprivate var buzzwords: [[String]]?
+        fileprivate var bsWords: [[String]]?
         
         // MARK: NSKeyValueCoding
-        public override func setValue(value: AnyObject?, forKey key: String) {
+        open override func setValue(_ value: Any?, forKey key: String) {
             if key == "suffix" {
                 suffixes = value as? [String]
             } else if key == "buzzwords" {
@@ -27,65 +27,65 @@ extension Faker {
             }
         }
         
-        private static let company = Company(dictionary: Faker.JSON("company"))
+        fileprivate static let company = Company(dictionary: Faker.JSON("company"))
         
         // MARK: Private methods
-        private func names() -> [String] {
+        fileprivate func names() -> [String] {
             return ["\(Name.lastName()) \(Company.suffix())",
                 "\(Name.lastName())-\(Name.lastName())",
                 "\(Name.lastName()), \(Name.lastName()) and \(Name.lastName())"]
         }
         
         // MARK: Methods
-        public static func name() -> String {
+        open static func name() -> String {
             let name = company.names().random()
             return name
         }
         
-        public static func suffix() -> String {
+        open static func suffix() -> String {
             guard let suffixes = company.suffixes else { return "" }
             return suffixes.random()
         }
         
-        public static func catchPhrase() -> String {
+        open static func catchPhrase() -> String {
             guard let buzzwords = company.buzzwords else { return "" }
             var phrases = [String]()
             for array in buzzwords {
                 phrases.append(array.random())
             }
-            return phrases.joinWithSeparator(" ")
+            return phrases.joined(separator: " ")
         }
         
-        public static func buzzword() -> String {
+        open static func buzzword() -> String {
             guard let buzzwords = company.buzzwords else { return "" }
             let words = buzzwords.random()
             let word = words.random()
             return word
         }
         
-        public static func bs() -> String {
+        open static func bs() -> String {
             guard let bsWords = company.bsWords else { return "" }
             var phrases = [String]()
             for array in bsWords {
                 phrases.append(array.random())
             }
-            return phrases.joinWithSeparator(" ")
+            return phrases.joined(separator: " ")
         }
         
-        public static func ein() -> String {
+        open static func ein() -> String {
             return numerify("##-#######", intConvertable: false)
         }
         
-        public static func dunsNumber() -> String {
+        open static func dunsNumber() -> String {
             return numerify("##-###-####", intConvertable: false)
         }
         
-        public static func logo() -> String {
+        open static func logo() -> String {
             let rand = Int.random(1...13)
             return "http://pigment.github.io/fake-logos/logos/medium/color/\(rand).png"
         }
         
-        public static func swedishOrganisationNumber() -> String {
+        open static func swedishOrganisationNumber() -> String {
             return numerify("###########")
         }
     }

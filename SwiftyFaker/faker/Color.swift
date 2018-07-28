@@ -9,7 +9,7 @@
 import Foundation
 
 extension Faker {
-    public class Color: Faker {
+    open class Color: Faker {
         
     }
 }

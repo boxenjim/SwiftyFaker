@@ -28,8 +28,8 @@ class BusinessTests: XCTestCase {
     
     func testCreditCardExpiry() {
         let expiry = Faker.Business.creditCardExpiry()
-        let result = expiry.compare(NSDate())
-        XCTAssertTrue(result == NSComparisonResult.OrderedDescending)
+        let result = expiry.compare(Date())
+        XCTAssertTrue(result == ComparisonResult.orderedDescending)
     }
     
     func testCreditCardType() {

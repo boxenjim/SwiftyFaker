@@ -9,12 +9,12 @@
 import Foundation
 
 extension Faker {
-    public class Team: Faker {
-        private var creatures: [String]?
-        private var sports: [String]?
+    open class Team: Faker {
+        fileprivate var creatures: [String]?
+        fileprivate var sports: [String]?
         
         // MARK: NSKeyValueCoding
-        public override func setValue(value: AnyObject?, forKey key: String) {
+        open override func setValue(_ value: Any?, forKey key: String) {
             if key == "creature" {
                 creatures = value as? [String]
             } else if key == "sport" {
@@ -24,29 +24,29 @@ extension Faker {
             }
         }
         
-        private static let _team = Team(dictionary: Faker.JSON("team"))
+        fileprivate static let _team = Team(dictionary: Faker.JSON("team"))
         
         // MARK: Private Methods
-        private func names() -> [String] {
+        fileprivate func names() -> [String] {
             return ["\(Team.state()) \(Team.creature())"]
         }
         
         // MARK: Methods
-        public static func creature() -> String {
+        open static func creature() -> String {
             guard let creatures = _team.creatures else { return "" }
             return creatures.random()
         }
         
-        public static func name() -> String {
+        open static func name() -> String {
             return _team.names().random()
         }
         
-        public static func sport() -> String {
+        open static func sport() -> String {
             guard let sports = _team.sports else { return "" }
             return sports.random()
         }
         
-        public static func state() -> String {
+        open static func state() -> String {
             return Address.state()
         }
     }

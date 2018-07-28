@@ -9,13 +9,13 @@
 import Foundation
 
 extension Faker {
-    public class Number: Faker {
+    open class Number: Faker {
         // MARK: Methods
-        public static func number(digits: Int = 5) -> Int {
+        open static func number(_ digits: Int = 5) -> Int {
             return Int.random(digits)
         }
         
-        public static func decimal(digits: Int, digitsAfter: Int = 2) -> Double {
+        open static func decimal(_ digits: Int, digitsAfter: Int = 2) -> Double {
             let rand = Double.random()
             let digitRand = rand * pow(Double(10), Double(digits + digitsAfter))
             let floorRand = floor(digitRand)
@@ -23,27 +23,27 @@ extension Faker {
             return afterDigitRand
         }
         
-        public static func hexadecimal(length: Int) -> String {
+        open static func hexadecimal(_ length: Int) -> String {
             return ""
         }
         
-        public static func between(range: Range<Int>) -> Int {
+        open static func between(_ range: Range<Int>) -> Int {
             return Int.random(range)
         }
         
-        public static func between(min: Double, max: Double) -> Double {
+        open static func between(_ min: Double, max: Double) -> Double {
             return Double.random(min, max: max)
         }
         
-        public static func positive() -> Double {
+        open static func positive() -> Double {
             return between(1.00, max: 5000.00)
         }
         
-        public static func negative() -> Double {
+        open static func negative() -> Double {
             return between(-5000.00, max: -1.00)
         }
         
-        public static func digit() -> Int {
+        open static func digit() -> Int {
             return between(0...9)
         }
     }

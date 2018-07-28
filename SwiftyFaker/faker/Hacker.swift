@@ -9,15 +9,15 @@
 import Foundation
 
 extension Faker {
-    public class Hacker: Faker {
-        private var abbreviations: [String]?
-        private var adjectives: [String]?
-        private var nouns: [String]?
-        private var verbs: [String]?
-        private var ingverbs: [String]?
+    open class Hacker: Faker {
+        fileprivate var abbreviations: [String]?
+        fileprivate var adjectives: [String]?
+        fileprivate var nouns: [String]?
+        fileprivate var verbs: [String]?
+        fileprivate var ingverbs: [String]?
         
         // MARK: NSKeyValueCoding
-        public override func setValue(value: AnyObject?, forKey key: String) {
+        open override func setValue(_ value: Any?, forKey key: String) {
             if key == "abbreviation" {
                 abbreviations = value as? [String]
             } else if key == "adjective" {
@@ -33,10 +33,10 @@ extension Faker {
             }
         }
         
-        private static let _hacker = Hacker(dictionary: Faker.JSON("hacker"))
+        fileprivate static let _hacker = Hacker(dictionary: Faker.JSON("hacker"))
         
         // MARK: Private methods
-        private func phrases() -> [String] {
+        fileprivate func phrases() -> [String] {
             return ["If we \(Hacker.verb()) the \(Hacker.noun()), we can get to the \(Hacker.abbreviation()) \(Hacker.noun()) through the \(Hacker.adjective()) \(Hacker.abbreviation()) \(Hacker.noun())!",
                 "We need to \(Hacker.verb()) the \(Hacker.adjective()) \(Hacker.abbreviation()) \(Hacker.noun())!",
                 "Try to \(Hacker.verb()) the \(Hacker.abbreviation()) \(Hacker.noun()), maybe it will \(Hacker.verb()) the \(Hacker.adjective()) \(Hacker.noun())!",
@@ -48,31 +48,31 @@ extension Faker {
         }
         
         // MARK: Methods
-        public static func saySomethingSmart() -> String {
+        open static func saySomethingSmart() -> String {
             return _hacker.phrases().random()
         }
         
-        public static func abbreviation() -> String {
+        open static func abbreviation() -> String {
             guard let abbreviations = _hacker.abbreviations else { return "" }
             return abbreviations.random()
         }
         
-        public static func adjective() -> String {
+        open static func adjective() -> String {
             guard let adjectives = _hacker.adjectives else { return "" }
             return adjectives.random()
         }
         
-        public static func noun() -> String {
+        open static func noun() -> String {
             guard let nouns = _hacker.nouns else { return "" }
             return nouns.random()
         }
         
-        public static func verb() -> String {
+        open static func verb() -> String {
             guard let verbs = _hacker.verbs else { return "" }
             return verbs.random()
         }
         
-        public static func ingverb() -> String {
+        open static func ingverb() -> String {
             guard let ingverbs = _hacker.ingverbs else { return "" }
             return ingverbs.random()
         }

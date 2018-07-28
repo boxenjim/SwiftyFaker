@@ -9,12 +9,12 @@
 import Foundation
 
 extension Faker {
-    public class Book: Faker {
-        private var titles: [String]?
-        private var publishers: [String]?
+    open class Book: Faker {
+        fileprivate var titles: [String]?
+        fileprivate var publishers: [String]?
         
         // MARK: NSKeyValueCoding
-        public override func setValue(value: AnyObject?, forKey key: String) {
+        open override func setValue(_ value: Any?, forKey key: String) {
             if key == "title" {
                 titles = value as? [String]
             } else if key == "publisher" {
@@ -24,20 +24,20 @@ extension Faker {
             }
         }
         
-        private static let _book = Book(dictionary: Faker.JSON("book"))
+        fileprivate static let _book = Book(dictionary: Faker.JSON("book"))
         
         
         // MARK: Methods
-        public static func title() -> String {
+        open static func title() -> String {
             guard let titles = _book.titles else { return "" }
             return titles.random()
         }
         
-        public static func author() -> String {
+        open static func author() -> String {
             return Name.name()
         }
         
-        public static func publisher() -> String {
+        open static func publisher() -> String {
             guard let publishers = _book.publishers else { return "" }
             return publishers.random()
         }

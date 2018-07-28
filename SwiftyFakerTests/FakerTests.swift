@@ -22,15 +22,15 @@ class FakerTests: XCTestCase {
     }
     
     func testNumerify() {
-        XCTAssertFalse(Faker.numerify("####").containsString("#"), "should not contain #")
+        XCTAssertFalse(Faker.numerify("####").contains("#"), "should not contain #")
     }
     
     func testLetterify() {
-        XCTAssertFalse(Faker.letterify("????").containsString("?"), "should not contain ?")
+        XCTAssertFalse(Faker.letterify("????").contains("?"), "should not contain ?")
     }
     
     func testBothify() {
-        XCTAssertFalse(Faker.bothify("????####").containsString("?"), "should not contain ?")
-        XCTAssertFalse(Faker.bothify("????####").containsString("#"), "should not contain #")
+        XCTAssertFalse(Faker.bothify("????####").contains("?"), "should not contain ?")
+        XCTAssertFalse(Faker.bothify("????####").contains("#"), "should not contain #")
     }
 }

@@ -9,12 +9,12 @@
 import Foundation
 
 extension Faker {
-    public class App: Faker {
-        private var names: [String]?
-        private var versions: [String]?
+    open class App: Faker {
+        fileprivate var names: [String]?
+        fileprivate var versions: [String]?
         
         // MARK: NSKeyValueCoding
-        public override func setValue(value: AnyObject?, forKey key: String) {
+        open override func setValue(_ value: Any?, forKey key: String) {
             if key == "name" {
                 names = value as? [String]
             } else if key == "version" {
@@ -24,25 +24,25 @@ extension Faker {
             }
         }
         
-        private static let _app = App(dictionary: Faker.JSON("app"))
+        fileprivate static let _app = App(dictionary: Faker.JSON("app"))
         
         // MARK: Private Address methods
-        private func authors() -> [String] {
+        fileprivate func authors() -> [String] {
             return ["\(Name.name())", "\(Company.name())"]
         }
         
         // MARK: Methods
-        public static func name() -> String {
+        open static func name() -> String {
             guard let names = _app.names else { return "" }
             return names.random()
         }
         
-        public static func appVersion() -> String {
+        open static func appVersion() -> String {
             guard let versions = _app.versions else { return "" }
             return numerify(versions.random())
         }
         
-        public static func author() -> String {
+        open static func author() -> String {
             return _app.authors().random()
         }
     }

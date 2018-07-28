@@ -9,6 +9,6 @@
 import Foundation
 
 extension Faker {
-    public class Animal: Faker {
+    open class Animal: Faker {
     }
 }

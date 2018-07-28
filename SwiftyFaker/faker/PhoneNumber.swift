@@ -9,12 +9,12 @@
 import Foundation
 
 extension Faker {
-    public class PhoneNumber: Faker {
-        private var areaCodes: [String]?
-        private var exchangeCodes: [String]?
+    open class PhoneNumber: Faker {
+        fileprivate var areaCodes: [String]?
+        fileprivate var exchangeCodes: [String]?
         
         // MARK: NSKeyValueCoding
-        public override func setValue(value: AnyObject?, forKey key: String) {
+        open override func setValue(_ value: Any?, forKey key: String) {
             if key == "area_code" {
                 areaCodes = value as? [String]
             } else if key == "exchange_code" {
@@ -24,10 +24,10 @@ extension Faker {
             }
         }
         
-        private static let _phoneNumber = PhoneNumber(dictionary: Faker.JSON("phone_number"))
+        fileprivate static let _phoneNumber = PhoneNumber(dictionary: Faker.JSON("phone_number"))
         
         // MARK: Private Methods
-        private func phoneFormats() -> [String] {
+        fileprivate func phoneFormats() -> [String] {
             return cellFormats() + ["\(PhoneNumber.areaCode())-\(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
             "(\(PhoneNumber.areaCode())) \(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
             "1-\(PhoneNumber.areaCode())-\(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())",
@@ -42,7 +42,7 @@ extension Faker {
             "\(PhoneNumber.areaCode()).\(PhoneNumber.exchangeCode()).\(PhoneNumber.subscriberNumber()) x\(PhoneNumber.extensionNumber())"]
         }
         
-        private func cellFormats() -> [String] {
+        fileprivate func cellFormats() -> [String] {
             return ["\(PhoneNumber.areaCode())-\(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber())",
                 "(\(PhoneNumber.areaCode())) \(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber())",
                 "1-\(PhoneNumber.areaCode())-\(PhoneNumber.exchangeCode())-\(PhoneNumber.subscriberNumber())",
@@ -54,29 +54,29 @@ extension Faker {
         }
         
         // MARK: Methods
-        public static func phoneNumber() -> String {
+        open static func phoneNumber() -> String {
             return numerify(_phoneNumber.phoneFormats().random())
         }
         
-        public static func cellPhone() -> String {
+        open static func cellPhone() -> String {
             return numerify(_phoneNumber.cellFormats().random())
         }
         
-        public static func areaCode() -> String {
+        open static func areaCode() -> String {
             guard let codes = _phoneNumber.areaCodes else { return "" }
             return codes.random()
         }
         
-        public static func exchangeCode() -> String {
+        open static func exchangeCode() -> String {
             guard let codes = _phoneNumber.exchangeCodes else { return "" }
             return codes.random()
         }
         
-        public static func subscriberNumber() -> String {
+        open static func subscriberNumber() -> String {
             return extensionNumber(4)
         }
         
-        public static func extensionNumber(length: Int = 3) -> String {
+        open static func extensionNumber(_ length: Int = 3) -> String {
             return numerify(numerifyable(length))
         }
     }

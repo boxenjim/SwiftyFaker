@@ -9,7 +9,7 @@
 import Foundation
 
 extension Faker {
-    public class Finance: Faker {
+    open class Finance: Faker {
         
     }
 }

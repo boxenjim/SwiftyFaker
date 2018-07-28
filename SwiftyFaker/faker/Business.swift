@@ -9,12 +9,12 @@
 import Foundation
 
 extension Faker {
-    public class Business: Faker {
-        private var credit_card_numbers: [String]?
-        private var credit_card_types: [String]?
+    open class Business: Faker {
+        fileprivate var credit_card_numbers: [String]?
+        fileprivate var credit_card_types: [String]?
         
         // MARK: NSKeyValueCoding
-        public override func setValue(value: AnyObject?, forKey key: String) {
+        open override func setValue(_ value: Any?, forKey key: String) {
             if key == "credit_card_numbers" {
                 credit_card_numbers = value as? [String]
             } else if key == "credit_card_types" {
@@ -24,21 +24,21 @@ extension Faker {
             }
         }
         
-        private static let _business = Business(dictionary: Faker.JSON("business"))
+        fileprivate static let _business = Business(dictionary: Faker.JSON("business"))
         
         // MARK: Methods
-        public static func creditCardNumber() -> String {
+        open static func creditCardNumber() -> String {
             guard let numbers = _business.credit_card_numbers else { return "" }
             return numbers.random()
         }
         
-        public static func creditCardExpiry() -> NSDate {
-            let normalizedNow = NSCalendar.currentCalendar().startOfDayForDate(NSDate())
-            guard let expiry = NSCalendar.currentCalendar().dateByAddingUnit(NSCalendarUnit.Year, value: Int.random(1...4), toDate: normalizedNow, options: NSCalendarOptions()) else { return NSDate() }
+        open static func creditCardExpiry() -> Foundation.Date {
+            let normalizedNow = Calendar.current.startOfDay(for: Foundation.Date())
+            guard let expiry = (Calendar.current as NSCalendar).date(byAdding: NSCalendar.Unit.year, value: Int.random(1...4), to: normalizedNow, options: NSCalendar.Options()) else { return Foundation.Date() }
             return expiry
         }
         
-        public static func creditCardType() -> String {
+        open static func creditCardType() -> String {
             guard let types = _business.credit_card_types else { return "" }
             return types.random()
         }

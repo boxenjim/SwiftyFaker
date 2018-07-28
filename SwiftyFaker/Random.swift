@@ -11,14 +11,14 @@ import Foundation
 /**
 Arc Random for Double and Float
 */
-func arc4random <T: IntegerLiteralConvertible> (type: T.Type) -> T {
+func arc4random <T: ExpressibleByIntegerLiteral> (_ type: T.Type) -> T {
     var r: T = 0
-    arc4random_buf(&r, sizeof(T))
+    arc4random_buf(&r, MemoryLayout<T>.size)
     return r
 }
 
 extension UInt64 {
-    static func random(lower: UInt64 = min, upper: UInt64 = max) -> UInt64 {
+    static func random(_ lower: UInt64 = min, upper: UInt64 = max) -> UInt64 {
         var m: UInt64
         let u = upper - lower
         var r = arc4random(UInt64)
@@ -38,7 +38,7 @@ extension UInt64 {
 }
 
 extension Int64 {
-    static func random(lower: Int64 = min, upper: Int64 = max) -> Int64 {
+    static func random(_ lower: Int64 = min, upper: Int64 = max) -> Int64 {
         let (s, overflow) = Int64.subtractWithOverflow(upper, lower)
         let u = overflow ? UInt64.max - UInt64(~s) : UInt64(s)
         let r = UInt64.random(upper: u)
@@ -52,20 +52,20 @@ extension Int64 {
 }
 
 extension UInt32 {
-    static func random(lower: UInt32 = min, upper: UInt32 = max) -> UInt32 {
+    static func random(_ lower: UInt32 = min, upper: UInt32 = max) -> UInt32 {
         return arc4random_uniform(upper - lower) + lower
     }
 }
 
 extension Int32 {
-    static func random(lower: Int32 = min, upper: Int32 = max) -> Int32 {
+    static func random(_ lower: Int32 = min, upper: Int32 = max) -> Int32 {
         let r = arc4random_uniform(UInt32(Int64(upper) - Int64(lower)))
         return Int32(Int64(r) + Int64(lower))
     }
 }
 
 extension UInt {
-    static func random(lower: UInt = min, upper: UInt = max) -> UInt {
+    static func random(_ lower: UInt = min, upper: UInt = max) -> UInt {
         switch (__WORDSIZE) {
         case 32: return UInt(UInt32.random(UInt32(lower), upper: UInt32(upper)))
         case 64: return UInt(UInt64.random(UInt64(lower), upper: UInt64(upper)))
@@ -75,7 +75,7 @@ extension UInt {
 }
 
 extension Int {
-    static func random(lower: Int = min, upper: Int = max) -> Int {
+    static func random(_ lower: Int = min, upper: Int = max) -> Int {
         switch (__WORDSIZE) {
         case 32: return Int(Int32.random(Int32(lower), upper: Int32(upper)))
         case 64: return Int(Int64.random(Int64(lower), upper: Int64(upper)))
@@ -85,20 +85,20 @@ extension Int {
 }
 
 public extension Int {
-    public static func random(range: Range<Int>) -> Int {
-        let offset = range.startIndex < 0 ? abs(range.startIndex) : 0
-        let min = UInt32(range.startIndex + offset)
-        let max = UInt32(range.endIndex + offset)
+    public static func random(_ range: Range<Int>) -> Int {
+        let offset = range.lowerBound < 0 ? abs(range.lowerBound) : 0
+        let min = UInt32(range.lowerBound + offset)
+        let max = UInt32(range.upperBound + offset)
         return Int(min + arc4random_uniform(max - min)) - offset
     }
     
-    public static func random(digits: Int) -> Int {
+    public static func random(_ digits: Int) -> Int {
         let min = getMin(digits)
         let max = getMax(digits)
         return Int.random(min, upper: max)
     }
     
-    private static func getMin(digits: Int) -> Int {
+    fileprivate static func getMin(_ digits: Int) -> Int {
         var strng = "1"
         let absMax = UInt.max
         let maxCount = "\(absMax)".characters.count
@@ -110,7 +110,7 @@ public extension Int {
         return Int(strng)!
     }
     
-    private static func getMax(digits: Int) -> Int {
+    fileprivate static func getMax(_ digits: Int) -> Int {
         var strng = ""
         let absMax = UInt.max
         if digits >= "\(absMax)".characters.count {
@@ -125,7 +125,7 @@ public extension Int {
 }
 
 public extension Double {
-    public static func random(min: Double = 0.0, max: Double = 1.0) -> Double {
+    public static func random(_ min: Double = 0.0, max: Double = 1.0) -> Double {
         let offset = min < 0.0 ? abs(min) : 0.0
         let low = min + offset
         let high = max + offset
@@ -135,7 +135,7 @@ public extension Double {
 }
 
 public extension Float {
-    public static func random(min: Float = 0.0, max: Float = 1.0) -> Float {
+    public static func random(_ min: Float = 0.0, max: Float = 1.0) -> Float {
         let offset = min < 0.0 ? abs(min) : Float(0.0)
         let low = min + offset
         let high = max + offset
